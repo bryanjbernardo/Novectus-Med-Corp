@@ -44,7 +44,7 @@
         <link rel="stylesheet" href="https://use.typekit.net/gby6ddy.css">
         <!-- External CSS -->
         <link rel="stylesheet" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/css/normalize.css">
-        <link rel="stylesheet" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     
         <title>Novectus Medical Corporation</title>
     </head>
@@ -52,25 +52,21 @@
 <body> 
     <!-- Landing -->
     <header id="landing">
-        <div class="novectus-logo">
+        <nav class="fixed-navbar">
             <!-- Company logo and name  -->
-            <a href="/">
-                <div>
-                    <img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/NOVECTUS LOGO ONLY.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design." height="30">
-                    <div class="company-name">
-                        <span>NOVECTUS</span><br>
-                        <span>MEDICAL CORPORATION</span>
-                    </div>
+            <a href="#" class="nav-logo">
+                <img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/novectus-logo-only.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design." height="30">
+                <div class="company-name">
+                    <span>NOVECTUS</span><br>
+                    <span>MEDICAL CORPORATION</span>
                 </div>
-            </a>             
-        </div>
-        <!-- Navigation -->
-        <nav>
-            <ul>
+            </a> 
+            <!-- Navigation -->
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li>
-                    <a href="#">Products</a>
+                    <a href="#">Products <span class="arrow"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/dropdown.svg" alt="dropdown arrow"></span></a>
                     <ul>
                       <!-- Placeholder dropdown items -->
                       <li><a href="#">Supplements</a></li>
@@ -90,7 +86,7 @@
                 <a href="#" class="learn-more-btn">Learn More</a>
             </div>
             <div class="hero-image">
-                <img src="images/home-page/family-portrait.webp" alt="Portrait of grandparents, parents, and two children as a big, happy family.">
+                <img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/home-page/family-portrait.webp" alt="Portrait of grandparents, parents, and two children as a big, happy family.">
             </div>
         </section>
     </header>
@@ -248,20 +244,20 @@
         </section>
     </main>
     <footer class="site-footer">
-        <div class="footer-logo">
-            <a href="/">
-                <div>
-                    <img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/NOVECTUS%20LOGO%20ONLY.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design." height="30">
-                    <div>
-                        <span>NOVECTUS</span><br>
-                        <span>MEDICAL CORPORATION</span>
-                    </div>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">
+                <img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/novectus-logo-only.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design.">
+                <div class="company-name">
+                    <span>NOVECTUS</span><br>
+                    <span>MEDICAL CORPORATION</span>
                 </div>
             </a>  
     
-            <p>Terms and Conditions | Privacy Policy</p>
-            <p><small>&copy; 2024 Novectus Medical Corporation</small></p>
-            <p><small>All Rights Reserved</small></p>
+            <div>
+                <p>Terms and Conditions | Privacy Policy</p>
+                <p><small>&copy; 2024 Novectus Medical Corporation</small></p>
+                <p><small>All Rights Reserved</small></p>
+            </div>
         </div>
         <div class="footer-links">
             <div class="footer-section">
@@ -283,8 +279,8 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4><a href="">Contact Us</a></h4>
-                <p>Got questions or feedback? We'd love to hear from you!</p>
+                <h4><a href="#">Contact Us</a></h4>
+                <p><a href="#">Got questions or feedback? We'd love to hear from you!</a></p>
                 <ul class="social-links">
                     <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-facebook.svg" alt="Facebook logo. Click to visit page."></a></li>
                     <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-instagram.svg" alt="Instagram logo. Click to visit page."></a></li>
