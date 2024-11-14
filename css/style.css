@@ -1,0 +1,186 @@
+/* 
+COLOR PALETTE
+Text: #181818
+Background: #F1F2F3
+Primary: #018E47
+Secondary: #C6C6C6
+Accent: #8DCF4F
+*/
+
+/* GLOBAL STYLES
+-------------------------- */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #FFFFFF;
+    font-family: "source-sans-pro", sans-serif;
+}
+
+/* lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* links */
+a {
+    text-decoration: none;
+}
+
+/* buttons */
+#hero-section .learn-more-btn, #about-us .learn-more-btn {
+
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 48px;
+    gap: 10px;
+
+    width: 327px;
+    height: 92px;
+
+    border: 3px solid #018E47;
+    border-radius: 20px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    /* Learn More */
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+
+    color: #018E47;
+
+
+
+
+}
+
+/* Navbar */
+
+/* Footer */
+.site-footer {
+    
+    background: #F1F2F3;
+    background-position: bottom;
+    color: #868686;
+    display: flex;
+    height: 510px;
+}
+
+.footer-links {
+    /* Links */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: end;
+margin-left: auto;
+margin-right: 99px;
+margin-top: auto;
+margin-bottom: 166px;
+gap: 59px;
+
+position: static;
+width: auto;
+height: 210px;
+}
+
+.footer-section h4 a {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 0 24px;
+    color: #868686;
+
+}
+
+.footer-section li, .footer-section p {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.footer-section ul li a {
+    color: #868686;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    max-width: 9em;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+.social-links a:hover {
+    color: #17593a; /* Change color on hover */
+}
+
+.social-links img {
+    width: 43.2px;
+    aspect-ratio: 1/1;
+}
+
+.social-links img:hover {
+    fill: #17593a; /* Change color on hover */
+}
+
+
+/* HOME PAGE
+--------------------------- */
+
+/* Landing */
+
+#landing {
+    height: 100vh;
+    max-width: 100vw;
+    background: url(../images/home-page/landing.webp) no-repeat;
+    background-size: cover;
+}
+
+.hero-image img {
+    max-width: 709px;
+    max-height: 899px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  PRODUCTS PAGE
+--------------------------- */
