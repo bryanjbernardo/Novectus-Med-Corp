@@ -53,7 +53,7 @@ a {
 }
 
 /* buttons */
-#hero-section .learn-more-btn, #about-us .learn-more-btn {
+#hero .learn-more-btn, #about-us .learn-more-btn, #products-overview .learn-more-btn {
 
 
     /* Auto layout */
@@ -70,10 +70,6 @@ a {
     border: 3px solid #018E47;
     border-radius: 20px;
 
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 
     /* Learn More */
 
@@ -92,56 +88,70 @@ a {
 
 /* Navbar */
 .fixed-navbar {
-    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    background: transparent;
-    height: auto;
-    padding: 22px 98px 0;
-    
-    position: fixed;
-    min-width: 100%;
-    top: 0;
-    z-index: 1000;
+    flex-wrap: wrap; */
+    /* background: transparent; */
+    background-color: #fff;
 
-    transition: background 0.3s ease; /* Smooth transition for background change */
+    padding: 22px 86px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    
+    /* Smooth transition for background change */
+    /* transition: background 0.3s ease;  */
 
 }
 
 .scrolled {
-    background: rgba(241, 242, 243, 0.3); /* Translucent background when scrolled */
+    background: rgba(241, 242, 243, 0.9); /* Translucent background when scrolled */
 }
 
 .nav-logo {
+    position: absolute;
+
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
 
 .nav-logo img {
-    width: 150px;
-    height: 150px;
-    margin-right: 10px;
+    width: 76px;
+    height: auto;
+    margin-right: 5px;
     aspect-ratio: 1/1;
+
+    image-rendering: -webkit-optimize-contrast; /* For Chrome */
+    image-rendering: crisp-edges; /* For Firefox */
+    transform: translateZ(0); /* Creates a new stacking context */
+    backface-visibility: hidden; /* Prevents blurry text after scaling */
+    -webkit-font-smoothing: subpixel-antialiased; /* Smoother text rendering */
 }
 
-.nav-logo .company-name {
-    
+.company-name {
     color: #000000;
     font-family: "gill-sans", sans-serif;
-    display: inline-block;
-    position: relative;
+   
 }
 
-.nav-logo .company-name span:first-child {
-    font-size: 39.1px;
-}
-.nav-logo .company-name span:last-child {
-    font-size: 17.27px;
+.company-name span {
+    font-size: 19.81px;
 }
 
 .nav-links {
+    position: absolute;
+    /* Matches the dimensions from Figma */
+    right: 86px;
+    top: 29px;
+    width: 538px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 70px;
 }
@@ -150,56 +160,71 @@ a {
     position: relative;
 }
 
-.nav-links li a {
+.nav-link {
     color: #868686;
     font-size: 24px;
+    transition: color 0.3s ease;
 }
 
 /* Active link */
-.nav-links li a:hover,
-.nav-links li a:focus,
-.nav-links li a.active {
+.nav-link:hover,
+.nav-link:focus {
     color: #018E47;
-    font-weight: 600;
 }
 
+.nav-link.active {
+    color: #018E47;
+    font-weight: 700;
+}
+
+
 /* Dropdown menu */
-.nav-links li ul {
+.sub-nav {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(241, 242, 243, 0.6);
-    height: 150px;
+    background-color: rgba(241, 242, 243, 0.8);
+    /* height: 150px; */
     padding: 10px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    z-index: 1000;
 }
 
-.nav-links li:hover ul {
+.nav-links li:hover .sub-nav {
     display: block;
 }
 
-.nav-links li ul li {
-    padding: 8px 16px;
+
+.nav-link.products {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-icon {
+    width: 20px;
+    height: 23px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
+}
+
+.sub-nav li {
+    padding: 8px 18px;
     white-space: nowrap;
 }
 
-.nav-links li ul li a {
+.sub-link {
     color: #868686;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
+    transition: color 0.3s ease;
 }
 
-.nav-links li ul li a:hover {
+.sub-link:hover {
     color: #018E47;
-}
-
-.arrow {
-    font-size: 12px;
-    margin-left: 5px;
-    color: #868686;
-    vertical-align: middle;
 }
 
 
@@ -324,11 +349,6 @@ a {
     position: relative;
 }
 
-/* #hero-section {
-    height: 100%;
-    position: relative;
-} */
-
 .hero-content {
 
     display: flex;
@@ -344,6 +364,8 @@ a {
 
     width: 560px;
     height: 484px;
+
+    margin: auto;
 
 }
 /*  */
@@ -1096,3 +1118,326 @@ a {
 
 /*  PRODUCTS PAGE
 -------------------------------------- */
+
+/* #header-image {
+    min-width: 100vw;
+    max-height: 67vh;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#header-image img {
+    width: 100%;
+} */
+.hero-section {
+    position: relative;
+    /* height: 667px; */
+    height: 717px;
+    width: 100%;
+    background: linear-gradient(to left, 
+    #8DCF4F 0%,
+    #018E47 96%
+);
+    overflow: hidden;
+    /* width: 100vw; */
+    margin: 0 auto;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/products-page/hero.webp');
+    background-size: cover;
+    background-size: 100% auto; /* Makes image wider */
+    background-position: center 75%;
+    opacity: 0.3;
+    mix-blend-mode: multiply;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    opacity: 30%;
+}
+
+
+
+
+.hero-content  { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    top: 45%; /* Adjust this value as necessary to vertically center */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Fine-tunes the centering */
+    text-align: center; /* Ensures the text is centered within the heading */
+    font-family: "source-sans-pro", sans-serif;
+    color: #fff;
+
+    width: 100%; /* Ensures it takes full width but limits via max-width */
+    max-width: 56%; /* Prevents horizontal overflow */
+    max-height: 90%; /* Prevents vertical overflow */
+    width: 100%; /* Ensures it takes full width but limits via max-width */
+    height: auto; /* Ensures height is proportionate */
+}
+
+
+
+.hero-content h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    margin: 0;
+    color: #fff !important;
+}
+
+
+.hero-content p {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    margin: 0;
+    color: #fff !important;
+}
+
+
+
+
+
+
+/* Overall section styles */
+#products-overview {
+    background-color: #fff; /* Light background */
+    padding: 0;
+}
+
+/* Product cards layout */
+.products-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Always 1 column */
+    grid-auto-rows: minmax(150px, auto); /* Rows dynamically adjust based on content */
+    gap: 60px; /* Add space between rows */
+    justify-items: center;
+
+    margin: 60px 0 60px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 22.5px rgba(0, 0, 0, 0.1);
+    /* padding-right: 150px;  */
+    text-align: left;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: calc(40%) 1fr; /* Left side image, right side content */
+    align-items: stretch; /* Ensures child elements span full height of the card */
+    height: 100%; /* Ensures the card takes full height of its parent container */
+    width: 100%;
+    max-width: 90vw;
+    
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Product image container */
+.product-image-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    /* max-width: 50vw; */
+    border-radius: 30px 0 0 30px;
+}
+.dream .product-image-container {
+    background-color: #44C5DD;
+}
+
+.herbs .product-image-container {
+    background-color: #081E30;
+}
+
+.superior .product-image-container {
+    background-color: #57246E;
+}
+
+.actigraft .product-image-container {
+    background-color: #9D6384;
+}
+
+.recoverix .product-image-container {
+    background-color: #92A0A9;
+}
+
+.nutriqk .product-image-container {
+    background-color: #DE1B23;
+}
+
+.product-image-container img {
+    max-width: 80%; /* Adjust image size */
+    max-height: 60%; /* Prevent overflow */
+    object-fit: contain; /* Ensures image scales without distortion */
+    border-radius: 30px;
+    box-shadow: 0px 16px 32px -8px rgba(12, 12, 13, 0.4);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    width: 67%;
+    margin: 80px auto;
+}
+
+/* Product info styles */
+.product-info h3 {
+    color: #018E47;
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+
+    /* margin-bottom: 10px; */
+    align-self: stretch;
+    
+    margin: 0;
+}
+
+
+.product-info p {
+    /* margin-bottom: 20px; */
+    /* margin: 0; */
+}
+
+
+.product-info p, .product-info li {
+    color: #181818;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+}
+
+
+.product-features {
+    padding: 0;
+    margin: 0;
+}
+
+.product-features li {
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Add space between the icon and text */
+    margin-bottom: 20px; /* Add spacing between list items */
+}
+
+.product-features li img {
+    width: 60px; /* Set a consistent size for icons */
+    height: 60px;
+    flex-shrink: 0; /* Prevent the icon from shrinking */
+}
+
+
+/* Learn More button */
+.product-info .learn-more-btn { 
+    transition: transform 0.2s ease-in-out;
+    margin-top: 30px;
+}
+
+.learn-more-btn:hover {
+    transform: scale(1.02);
+}
+
+.shops-wrapper {
+    background: #E7F5D9;
+    width: 100%;
+    /* height: 14vh; */
+    height: 14vh;
+
+    display: flex;
+    justify-content: center; /* Center flexbox horizontally */
+    align-items: center;    /* Center flexbox vertically */
+    overflow: hidden;       /* Ensure no overflow outside parent */
+}
+
+.shop-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    gap: 60px;
+
+    width: 58%;  /* Adjust the width for responsiveness */
+    max-width: 90%;  /* Limit the maximum width */
+    
+    overflow: visible;
+}
+
+.shop-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.shop-link:hover {
+    transform: scale(1.3);
+}
+
+.shop-link img {
+    height: 40px; /* Increased from 40px */
+    width: auto;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+/* Optional: Add a subtle opacity change for shop links */
+.shop-link img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.shop-link:hover img {
+    opacity: 1;
+}
