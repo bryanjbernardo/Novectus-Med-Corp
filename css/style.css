@@ -53,7 +53,7 @@ a {
 }
 
 /* buttons */
-#hero .learn-more-btn, #about-us .learn-more-btn, #products-overview .learn-more-btn {
+#hero-section .learn-more-btn, #about-us .learn-more-btn, #products-overview .learn-more-btn {
 
 
     /* Auto layout */
@@ -70,6 +70,10 @@ a {
     border: 3px solid #018E47;
     border-radius: 20px;
 
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 
     /* Learn More */
 
@@ -88,25 +92,22 @@ a {
 
 /* Navbar */
 .fixed-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120px;
-
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* background: transparent; */
-    background-color: #fff;
+    background: hsla(0, 0%, 95%, 0.8);
 
-    padding: 22px 86px;
-    z-index: 1000;
-    transition: all 0.3s ease;
+    height: auto;
+    padding: 22px 98px 0;
     
-    /* Smooth transition for background change */
-    /* transition: background 0.3s ease;  */
+    position: fixed;
+    min-width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    transition: background 0.3s ease; /* Smooth transition for background change */
 
 }
 
@@ -115,43 +116,34 @@ a {
 }
 
 .nav-logo {
-    position: absolute;
-
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
 .nav-logo img {
-    width: 76px;
+    width: 150px;
     height: auto;
-    margin-right: 5px;
+    margin-right: 10px;
     aspect-ratio: 1/1;
-
-    image-rendering: -webkit-optimize-contrast; /* For Chrome */
-    image-rendering: crisp-edges; /* For Firefox */
-    transform: translateZ(0); /* Creates a new stacking context */
-    backface-visibility: hidden; /* Prevents blurry text after scaling */
-    -webkit-font-smoothing: subpixel-antialiased; /* Smoother text rendering */
 }
 
-.company-name {
+.nav-logo .company-name {
+    
     color: #000000;
     font-family: "gill-sans", sans-serif;
-   
+    display: inline-block;
+    position: relative;
 }
 
-.company-name span {
-    font-size: 19.81px;
+.nav-logo .company-name span:first-child {
+    font-size: 39.1px;
+}
+.nav-logo .company-name span:last-child {
+    font-size: 17.27px;
 }
 
 .nav-links {
-    position: absolute;
-    /* Matches the dimensions from Figma */
-    right: 86px;
-    top: 29px;
-    width: 538px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 70px;
 }
@@ -160,71 +152,56 @@ a {
     position: relative;
 }
 
-.nav-link {
+.nav-links li a {
     color: #868686;
     font-size: 24px;
-    transition: color 0.3s ease;
 }
 
 /* Active link */
-.nav-link:hover,
-.nav-link:focus {
+.nav-links li a:hover,
+.nav-links li a:focus,
+.nav-links li a.active {
     color: #018E47;
+    font-weight: 600;
 }
-
-.nav-link.active {
-    color: #018E47;
-    font-weight: 700;
-}
-
 
 /* Dropdown menu */
-.sub-nav {
+.nav-links li ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(241, 242, 243, 0.8);
-    /* height: 150px; */
+    background-color: rgba(241, 242, 243, 0.6);
+    height: 150px;
     padding: 10px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    z-index: 1000;
 }
 
-.nav-links li:hover .sub-nav {
+.nav-links li:hover ul {
     display: block;
 }
 
-
-.nav-link.products {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.dropdown-icon {
-    width: 20px;
-    height: 23px;
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    transform: translateZ(0);
-}
-
-.sub-nav li {
-    padding: 8px 18px;
+.nav-links li ul li {
+    padding: 8px 16px;
     white-space: nowrap;
 }
 
-.sub-link {
+.nav-links li ul li a {
     color: #868686;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
-    transition: color 0.3s ease;
 }
 
-.sub-link:hover {
+.nav-links li ul li a:hover {
     color: #018E47;
+}
+
+.arrow {
+    font-size: 12px;
+    margin-left: 5px;
+    color: #868686;
+    vertical-align: middle;
 }
 
 
@@ -348,6 +325,11 @@ a {
     background-size: cover;
     position: relative;
 }
+
+/* #hero-section {
+    height: 100%;
+    position: relative;
+} */
 
 .hero-content {
 
@@ -1119,7 +1101,7 @@ a {
 /*  PRODUCTS PAGE
 -------------------------------------- */
 
-/* #header-image {
+#header-image {
     min-width: 100vw;
     max-height: 67vh;
 
@@ -1129,59 +1111,9 @@ a {
 
 #header-image img {
     width: 100%;
-} */
-.hero-section {
-    position: relative;
-    /* height: 667px; */
-    height: 717px;
-    width: 100%;
-    background: linear-gradient(to left, 
-    #8DCF4F 0%,
-    #018E47 96%
-);
-    overflow: hidden;
-    /* width: 100vw; */
-    margin: 0 auto;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/products-page/hero.webp');
-    background-size: cover;
-    background-size: 100% auto; /* Makes image wider */
-    background-position: center 75%;
-    opacity: 0.3;
-    mix-blend-mode: multiply;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    mix-blend-mode: multiply;
-    opacity: 30%;
-}
-
-
-
-
-.hero-content  { 
+.products-heading {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1204,34 +1136,23 @@ a {
     height: auto; /* Ensures height is proportionate */
 }
 
-
-
-.hero-content h1 {
+.products-heading h1 {
     font-weight: 700;
     font-size: 48px;
     line-height: 60px;
     letter-spacing: -0.02em;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     margin: 0;
-    color: #fff !important;
 }
 
 
-.hero-content p {
+.products-heading p {
     font-weight: 400;
     font-size: 32px;
     line-height: 40px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
     margin: 0;
-    color: #fff !important;
 }
-
-
-
-
-
 
 /* Overall section styles */
 #products-overview {
@@ -1381,12 +1302,14 @@ a {
 
 /* Learn More button */
 .product-info .learn-more-btn { 
-    transition: transform 0.2s ease-in-out;
+    transition: background-color 0.2s ease;
     margin-top: 30px;
+    transition: transform 0.4s ease-in-out;
 }
 
 .learn-more-btn:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
+    background-color: #f1f1f1;
 }
 
 .shops-wrapper {

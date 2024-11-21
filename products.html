@@ -50,43 +50,40 @@
     </head>
     
 <body>
-    <header class="hero-section">
-        
+    <header id="product-landing">
+        <nav class="fixed-navbar">
+            <!-- Company logo and name  -->
+            <a href="#" class="nav-logo">
+                <img src="images/common-images/novectus-logo-only.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design.">
+                <div class="company-name">
+                    <span>NOVECTUS MEDICAL</span>
+                    <span>CORPORATION</span>
+                </div>
+            </a> 
+            <!-- Navigation -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li>
+                    <a href="#">Products <span class="arrow"><img src="images/common-images/dropdown.svg" alt="dropdown arrow"></span></a>
+                    <ul>
+                      <!-- Placeholder dropdown items -->
+                      <li><a href="#">Supplements</a></li>
+                      <li><a href="#">Medicines</a></li>
+                      <li><a href="#">Health Devices</a></li>
+                      <li><a href="#">Wellness Products</a></li>
+                    </ul>
+                  </li> 
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
         <!-- Products landing -->
-        <section class="hero-overlay">
-            <nav class="fixed-navbar">
-                <!-- Company logo and name  -->
-                <a href="#" class="nav-logo">
-                    <img src="images/common-images/novectus-logo-only.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design.">
-                    <div class="company-name">
-                        <span >NOVECTUS MEDICAL CORPORATION</span>
-                    </div>
-                </a> 
-                <!-- Navigation -->
-                <ul class="nav-links">
-                    <li><a href="#" class="nav-link">Home</a></li>
-                    <li><a href="#" class="nav-link">About</a></li>
-                    <li>
-                        <a href="#" class="nav-link products">Products <img src="images/common-images/dropdown.svg" alt="dropdown arrow" class="dropdown-icon"></a>
-                        <ul class="sub-nav">
-                          <!-- Placeholder dropdown items -->
-                          <li><a href="#" class="sub-link">Supplements</a></li>
-                          <li><a href="#" class="sub-link">Medicines</a></li>
-                          <li><a href="#" class="sub-link">Health Devices</a></li>
-                          <li><a href="#" class="sub-link">Wellness Products</a></li>
-                        </ul>
-                      </li> 
-                    <li><a href="#" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hero-background">
-                <div class="hero-image"></div>
+        <section id="header-image">
+            <div class="products-heading">
+                <h1>Discover the Global Breakthrough <br>  Solutions for Healthier Families</h1>
+                <p>We offer a wide range of top-quality healthcare products from around the world. Browse and find solutions to your family&apos;s health and wellness needs.</p>
             </div>
-            <div class="hero-content">
-                <h1 class="hero-title">Discover the Global Breakthrough <br> Solutions for Healthier Families</h1>
-                <p class="hero-description">We offer a wide range of top-quality healthcare products from around the world. Browse and find solutions to your family&apos;s health and wellness needs.</p>
-            </div>
-            
+            <img src="images/products-page/products-landing.webp" alt="Pills, tablets, and a small spray bottle.">
         </section>
         
     </header>
@@ -328,51 +325,8 @@
 
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <a href="#" class="footer-logo">
-                <img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/novectus-logo-only.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design.">
-                <div class="company-name">
-                    <span>NOVECTUS</span><br>
-                    <span>MEDICAL CORPORATION</span>
-                </div>
-            </a>  
-    
-            <div>
-                <p>Terms and Conditions | Privacy Policy</p>
-                <p><small>&copy; 2024 Novectus Medical Corporation</small></p>
-                <p><small>All Rights Reserved</small></p>
-            </div>
-        </div>
-        <div class="footer-links">
-            <div class="footer-section">
-                <h4><a href="">About Us</a></h4>
-                <ul>
-                    <li><a href="#">Our Mission</a></li>
-                    <li><a href="#">Our Vision</a></li>
-                    <li><a href="#">Our Story</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4><a href="">Products</a></h4>
-                <ul>
-                    <li><a href="#">DreamWell</a></li>
-                    <li><a href="#">Herbs of the Earth</a></li>
-                    <li><a href="#">Superior Source Vitamins</a></li>
-                    <li><a href="#">NutriQk</a></li>
-                    <li><a href="#">VitaMini</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4><a href="#">Contact Us</a></h4>
-                <p><a href="#">Got questions or feedback? We'd love to hear from you!</a></p>
-                <ul class="social-links">
-                    <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-facebook.svg" alt="Facebook logo. Click to visit page."></a></li>
-                    <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-instagram.svg" alt="Instagram logo. Click to visit page."></a></li>
-                    <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-linkedin.svg" alt="LinkedIn logo. Click to visit page."></a></li>
-                </ul>
-            </div>
-        </div>
+    <footer>
+
     </footer>
     <script src="js/navbar.js"></script>
 </body>
