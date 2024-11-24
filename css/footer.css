@@ -1,0 +1,132 @@
+/* Footer Layout */
+.footer {
+    background-color: #F1F1F1;
+    width: 100%;
+    /* max-width: 1920px; */
+    height: auto;
+    /* margin: 0 auto; */
+    /* padding: 60px 100px 40px; */
+    padding: 105px 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    /* min-height: 493px; */
+    position: relative;
+    
+    color: #868686;
+}
+
+/* Top Section with Logo and Links */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+/* Logo Styling */
+.footer-logo {
+    width: 405px;
+    height: 180px;
+    object-fit: contain;
+}
+
+/* Links Section */
+.footer-links {
+    display: flex;
+    gap: 59px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #868686;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #018F47;
+}
+
+.footer-column p {
+    color: #868686;
+    line-height: 1.5;
+}
+
+/* Bottom Section */
+.footer-bottom {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-end;
+    margin-top: auto;
+
+    position: absolute;
+width: 415px;
+height: 90px;
+left: 100px;
+/* top: 300px; */
+bottom: 5%;
+}
+
+/* Copyright Text */
+.fineprint {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.fineprint strong {
+    font-weight: 600;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 13px;
+    margin-top: 1.5em;
+}
+
+.social-icon {
+    width: 43.2px;
+    height: 43.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    width: 39.6px;
+    height: 39.6px;
+    filter: brightness(0) saturate(100%) invert(52%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(92%) contrast(93%);
+    transition: filter 0.3s ease;
+}
+
+.social-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(97%) saturate(1124%) hue-rotate(134deg) brightness(93%) contrast(103%);
+} 

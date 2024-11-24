@@ -44,48 +44,52 @@
         <link rel="stylesheet" href="https://use.typekit.net/gby6ddy.css">
         <!-- External CSS -->
         <link rel="stylesheet" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="./css/products.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/cta-button.css">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
         
         <title>Our Products - Novectus Medical Corporation</title>
     </head>
     
 <body>
-    <header id="product-landing">
-        <nav class="fixed-navbar">
-            <!-- Company logo and name  -->
-            <a href="#" class="nav-logo">
-                <img src="images/common-images/novectus-logo-only.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design.">
-                <div class="company-name">
-                    <span>NOVECTUS MEDICAL</span>
-                    <span>CORPORATION</span>
-                </div>
-            </a> 
-            <!-- Navigation -->
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li>
-                    <a href="products.html">Products <span class="arrow"><img src="images/common-images/dropdown.svg" alt="dropdown arrow"></span></a>
-                    <ul>
-                      <!-- Placeholder dropdown items -->
-                      <li><a href="#">Supplements</a></li>
-                      <li><a href="#">Medicines</a></li>
-                      <li><a href="#">Health Devices</a></li>
-                      <li><a href="#">Wellness Products</a></li>
-                    </ul>
-                  </li> 
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Products landing -->
-        <section id="header-image">
-            <div class="products-heading">
-                <h1>Discover the Global Breakthrough <br>  Solutions for Healthier Families</h1>
-                <p>We offer a wide range of top-quality healthcare products from around the world. Browse and find solutions to your family&apos;s health and wellness needs.</p>
+    <header class="landing">
+        <!-- Hero Section -->
+        <section class="product-hero-overlay">
+            <div class="product-hero-content">
+                <h1 class="product-hero-title">Discover the Global Breakthrough <br>  Solutions for Healthier Families</h1>
+                <p class="product-hero-description">We offer a wide range of top-quality healthcare products from around the world. Browse&nbsp;and find solutions to your family&apos;s health and wellness needs.</p>
             </div>
-            <img src="images/products-page/products-landing.webp" alt="Pills, tablets, and a small spray bottle.">
         </section>
-        
+        <!-- Main site navigation -->
+        <nav class="fixed-navbar">
+        <!-- Company logo and name  -->
+        <a href="index.html" class="nav-logo">
+            <img src="assets/footer/novectus-logo-footer.svg" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design." height="30">
+        </a> 
+        <!-- Navigation -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="products.html" class="active">
+                    Products
+                    <span class="arrow">
+                        <img src="./product-button.svg" alt="dropdown arrow">
+                    </span>
+                </a>
+                <ul>
+                    <li><a href="#">Supplements</a></li>
+                    <li><a href="#">Medicines</a></li>
+                    <li><a href="#">Health Devices</a></li>
+                    <li><a href="#">Wellness Products</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
     </header>
 
     <main>
@@ -109,22 +113,22 @@
                     </div>
                 </article>
                 <!-- Shop Links -->
-                <div class="shops-wrapper">
-                    <div class="shop-links">
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-mercury.svg" alt="Mercury Drug Store">
+                <div class="product-shops-wrapper">
+                    <div class="product-shop-links">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Mercury.svg" alt="Mercury Drug Store">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/watsons.svg" alt="Watsons">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Watsons.svg" alt="Watsons">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-rose-pharmacy.svg" alt="Rose Pharmacy">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/RosePharmacy.svg" alt="Rose Pharmacy">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-shopee.svg" alt="Shopee">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Shopee.svg" alt="Shopee">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/lazada.svg" alt="Lazada">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Lazada.svg" alt="Lazada">
                         </a>
                     </div>
                 </div>
@@ -144,23 +148,23 @@
                         <a href="https://herbsoftheearth.com" target="_blank" rel="noopener noreferrer" class="learn-more-btn">Learn More</a>
                     </div>
                 </article>
-                <!-- Shop Links -->
-                <div class="shops-wrapper">
-                    <div class="shop-links">
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-mercury.svg" alt="Mercury Drug Store">
+                 <!-- Shop Links -->
+                 <div class="product-shops-wrapper">
+                    <div class="product-shop-links">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Mercury.svg" alt="Mercury Drug Store">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/watsons.svg" alt="Watsons">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Watsons.svg" alt="Watsons">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-rose-pharmacy.svg" alt="Rose Pharmacy">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/RosePharmacy.svg" alt="Rose Pharmacy">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-shopee.svg" alt="Shopee">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Shopee.svg" alt="Shopee">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/lazada.svg" alt="Lazada">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Lazada.svg" alt="Lazada">
                         </a>
                     </div>
                 </div>
@@ -183,24 +187,24 @@
                     </div>
                 </article>
                 <!-- Shop Links -->
-                <div class="shops-wrapper">
-                    <div class="shop-links">
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-mercury.svg" alt="Mercury Drug Store">
-                        </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/watsons.svg" alt="Watsons">
-                        </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-rose-pharmacy.svg" alt="Rose Pharmacy">
-                        </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-shopee.svg" alt="Shopee">
-                        </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/lazada.svg" alt="Lazada">
-                        </a>
-                    </div>
+                <div class="product-shops-wrapper">
+                <div class="product-shop-links">
+                    <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/icons/partners/Mercury.svg" alt="Mercury Drug Store">
+                    </a>
+                    <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/icons/partners/Watsons.svg" alt="Watsons">
+                    </a>
+                    <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/icons/partners/RosePharmacy.svg" alt="Rose Pharmacy">
+                    </a>
+                    <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/icons/partners/Shopee.svg" alt="Shopee">
+                    </a>
+                    <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/icons/partners/Lazada.svg" alt="Lazada">
+                    </a>
+                </div>
                 </div>
                 <!-- Product 4: ActiGraft -->
                 <article class="product-card actigraft">
@@ -221,22 +225,22 @@
                     </div>
                 </article>
                 <!-- Shop Links -->
-                <div class="shops-wrapper">
-                    <div class="shop-links">
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-mercury.svg" alt="Mercury Drug Store">
+                <div class="product-shops-wrapper">
+                    <div class="product-shop-links">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Mercury.svg" alt="Mercury Drug Store">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/watsons.svg" alt="Watsons">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Watsons.svg" alt="Watsons">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-rose-pharmacy.svg" alt="Rose Pharmacy">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/RosePharmacy.svg" alt="Rose Pharmacy">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-shopee.svg" alt="Shopee">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Shopee.svg" alt="Shopee">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/lazada.svg" alt="Lazada">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Lazada.svg" alt="Lazada">
                         </a>
                     </div>
                 </div>
@@ -255,23 +259,23 @@
                         <a href="https://recoverix.com/" target="_blank" rel="noopener noreferrer" class="learn-more-btn">Learn More</a>
                     </div>
                 </article>
-                <!-- Shop Links -->
-                <div class="shops-wrapper">
-                    <div class="shop-links">
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-mercury.svg" alt="Mercury Drug Store">
+                 <!-- Shop Links -->
+                 <div class="product-shops-wrapper">
+                    <div class="product-shop-links">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Mercury.svg" alt="Mercury Drug Store">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/watsons.svg" alt="Watsons">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Watsons.svg" alt="Watsons">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-rose-pharmacy.svg" alt="Rose Pharmacy">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/RosePharmacy.svg" alt="Rose Pharmacy">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-shopee.svg" alt="Shopee">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Shopee.svg" alt="Shopee">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/lazada.svg" alt="Lazada">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Lazada.svg" alt="Lazada">
                         </a>
                     </div>
                 </div>
@@ -294,84 +298,98 @@
                     </div>
                 </article>
                 <!-- Shop Links -->
-                <div class="shops-wrapper">
-                    <div class="shop-links">
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-mercury.svg" alt="Mercury Drug Store">
+                <div class="product-shops-wrapper">
+                    <div class="product-shop-links">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Mercury.svg" alt="Mercury Drug Store">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/watsons.svg" alt="Watsons">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Watsons.svg" alt="Watsons">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-rose-pharmacy.svg" alt="Rose Pharmacy">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/RosePharmacy.svg" alt="Rose Pharmacy">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/image-shopee.svg" alt="Shopee">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Shopee.svg" alt="Shopee">
                         </a>
-                        <a href="#" class="shop-link" target="_blank" rel="noopener noreferrer">
-                            <img src="images/home-page/lazada.svg" alt="Lazada">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="./assets/icons/partners/Lazada.svg" alt="Lazada">
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- CTA -->
-        <section id="cta">
-            <div class="cta-wrapper">
-                <h3>Start Your World Class Wellness Journey With Us</h3>
-                <p>Browse through a wide selection of innovative and effective products from around the world. Discover the best solutions for you and your family&apos;s health and wellness.</p>
-                <a href="#">Browse Products</a>
+
+         <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Take the Next Step to Better Health</h2>
+                <p class="cta-text">Ready to start your journey to a better health? Got any questions or feedback about our&nbsp;products? We&apos;d love to hear from you! Let us know how we can help you.</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
             </div>
         </section>
-
     </main>
-
-    <footer class="site-footer">
-        <div class="footer-content">
-            <a href="#" class="footer-logo">
-                <img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/novectus-logo-only.webp" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design.">
-                <div class="company-name">
-                    <span>NOVECTUS</span><br>
-                    <span>MEDICAL CORPORATION</span>
-                </div>
-            </a>  
-    
-            <div>
-                <p>Terms and Conditions | Privacy Policy</p>
-                <p><small>&copy; 2024 Novectus Medical Corporation</small></p>
-                <p><small>All Rights Reserved</small></p>
-            </div>
-        </div>
+        
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Logo -->
+        <a href="#landing" class="footer-logo"><img src="assets/footer/novectus-logo-footer.svg" alt="Novectus Logo"></a>
+        
+        <!-- Links Section -->
         <div class="footer-links">
-            <div class="footer-section">
-                <h4><a href="">About Us</a></h4>
+            <!-- About Us Column -->
+            <div class="footer-column">
+                <h3>About Us</h3>
                 <ul>
-                    <li><a href="#">Our Mission</a></li>
-                    <li><a href="#">Our Vision</a></li>
-                    <li><a href="#">Our Story</a></li>
+                    <li><a href="about.html#mission">Our Mission</a></li>
+                    <li><a href="about.html#vision">Our Vision</a></li>
+                    <li><a href="about.html#story">Our Story</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4><a href="">Products</a></h4>
+            <!-- Products Column -->
+            <div class="footer-column">
+                <h3>Products</h3>
                 <ul>
-                    <li><a href="#">DreamWell</a></li>
-                    <li><a href="#">Herbs of the Earth</a></li>
+                    <li><a href="https://dreamwell.ph/" target="_blank">DreamWell</a></li>
+                    <li><a href="https://herbsoftheearth.com/" target="_blank">Herbs of the Earth</a></li>
                     <li><a href="#">Superior Source Vitamins</a></li>
                     <li><a href="#">NutriQk</a></li>
                     <li><a href="#">VitaMini</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4><a href="#">Contact Us</a></h4>
-                <p><a href="#">Got questions or feedback? We'd love to hear from you!</a></p>
-                <ul class="social-links">
-                    <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-facebook.svg" alt="Facebook logo. Click to visit page."></a></li>
-                    <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-instagram.svg" alt="Instagram logo. Click to visit page."></a></li>
-                    <li><a href="#"><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/common-images/footer-linkedin.svg" alt="LinkedIn logo. Click to visit page."></a></li>
-                </ul>
+            <!-- Contact Us Column -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><a href="contact.html">Got questions or feedback?<br>We'd love to hear from you!</a></p>
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="#" class="social-icon">
+                        <img src="assets/footer/facebook-logo-footer.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="assets/footer/instagram-logo-footer.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="assets/footer/linkedin-logo-footer.svg" alt="LinkedIn">
+                    </a>
+                </div>
             </div>
+            
         </div>
+
+        <!-- Copyright Text -->
+        <div class="footer-bottom">
+            <p class="fineprint">
+                <strong>Terms and Conditions | Privacy Policy</strong><br>
+                <small>&copy;2024 Novectus Medical Corporation<br>
+                    All Rights Reserved
+                </small>
+            </p>
+        </div>
+
+        
     </footer>
+
     <script src="js/navbar.js"></script>
 </body>
 </html>

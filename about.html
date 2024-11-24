@@ -1,58 +1,417 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- Mobile browser theme color -->
-        <meta name="theme-color" content="#8DCF4F" />
-        
-        <!-- Open Graph metadata for social media previews and sharing -->
-        <meta property="og:title" content="About Novectus Medical Corporation" />
-        <meta property="og:description" content="Learn about Novectus Medical Corporation's journey and mission to bring breakthrough healthcare solutions to Filipino families." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://bryanjbernardo.github.io/Novectus-Med-Corp/about" />
-        <meta property="og:image" content="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/meta-images/about.webp" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="1920" />
-        <meta property="og:image:height" content="1080" />
-        <meta property="og:image:alt" content="People working together, symbolizing Novectus Medical Corporation's commitment to innovation in healthcare." />
-    
-        <!-- General metadata for SEO -->
-        <meta name="description" content="Discover how Novectus Medical Corporation is pioneering the future of healthcare through innovative solutions and natural remedies, improving the lives of Filipino families." />
-        <meta name="keywords" content="Novectus Medical Corporation, healthcare innovation, natural medicines, health solutions, global healthcare, wellness products, Filipino families" />
-        <meta name="author" content="BMZ Digital Development" />
-        
-        <!-- Icons for Apple devices -->
-        <link rel="apple-touch-icon" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/meta-icons/apple-touch-icon-iphone-60x60.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/meta-icons/apple-touch-icon-ipad-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/meta-icons/apple-touch-icon-iphone-retina-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/meta-icons/apple-touch-icon-ipad-retina-152x152.png">
-        
-        <!-- Favicon for standard browsers -->
-        <link rel="shortcut icon" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/meta-icons/favicon.ico">
-        
-        <!-- Adobe Typekit font stylesheet link -->
-        <link rel="stylesheet" href="https://use.typekit.net/gby6ddy.css">
-        <!-- External CSS -->
-        <link rel="stylesheet" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/css/normalize.css">
-        <link rel="stylesheet" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/css/style.css">
-        
-        <title>About Novectus Medical Corporation</title>
-    </head>
-    
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="./css/about.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/cta-button.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Novectus Medical Corporation</title>
+</head>
 <body>
-    <header>
-        
+    <header class="landing">
+        <!-- Hero Section -->
+        <section class="about-hero-overlay">
+            <div class="about-hero-content">
+                <h1 class="about-hero-title">Leading the Way in GLOCAL Healthcare</h1>
+                <p class="about-hero-description">Novectus is committed to be a prime mover in bringing breakthrough medicines, supplements, devices, and other innovative and healthcare products from around the world to help provide more effective ways in achieving and maintaining optimum health and wellness to families.</p>
+            </div>
+        </section>
+        <!-- Main site navigation -->
+        <nav class="fixed-navbar" aria-label="Main navigation">
+            <!-- Company logo and name  -->
+            <a href="index.html" class="nav-logo">
+                <img src="assets/footer/novectus-logo-footer.svg" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design." height="30">
+            </a> 
+            <!-- Navigation Bar -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li>
+                    <a href="products.html">
+                        Products
+                        <span class="arrow">
+                            <img src="./product-button.svg" alt="dropdown arrow">
+                        </span>
+                    </a>
+                    <ul>
+                        <li><a href="#">Supplements</a></li>
+                        <li><a href="#">Medicines</a></li>
+                        <li><a href="#">Health Devices</a></li>
+                        <li><a href="#">Wellness Products</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+    <!-- Scroll dots navigation -->
+    <nav class="scroll-progress" aria-label="Section navigation">
+        <button class="scroll-dot" data-section="hero-section" aria-label="Go to Hero Section"></button>
+        <button class="scroll-dot" data-section="vision-mission" aria-label="Go to Vision & Mission Section"></button>
+        <button class="scroll-dot" data-section="stats-section" aria-label="Go to Statistics Section"></button>
+        <button class="scroll-dot" data-section="story-section" aria-label="Go to Story Section"></button>
+        <button class="scroll-dot" data-section="map-section" aria-label="Go to Map Section"></button>
+        <button class="scroll-dot" data-section="partners-section" aria-label="Go to Partners Section"></button>
+        <button class="scroll-dot" data-section="cta-section" aria-label="Go to Call to Action Section"></button>
+    </nav>
     
     <main>
-        
-    </main>
-    
-    <footer>
+        <!-- Vision Mission Section -->
+        <section class="vision-mission">
+            <!-- Vision Section -->
+            <div id="vision" class="vision-container">
+                <h2>Our Vision</h2>
+                <p>We are a national leader in providing and promoting time-tested natural medicines and breakthrough global innovations that deliver safer and more effective health solutions for the achievement and maintenance of optimum health and wellness among families.</p>
+            </div>
+            <img src="assets/mission-vision/img_vision.png" alt="Vision" class="vision-image">
+            <div class="vision-decoration"></div>
+            
+            <!-- Mission Section -->
+            <div id="mission" class="mission-container">
+                <h2>Our Mission</h2>
+                <p>To constantly seek, study, test, and register natural medicines and medical breakthroughs & innovations from around the world — and market & distribute them in the most appropriate channels in order to reach the optimum number of families.</p>
+            </div>
+            <img src="assets/mission-vision/img_mission.webp" alt="Mission" class="mission-image">
+            <div class="mission-decoration"></div>
+        </section>
 
-    </footer>
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <div class="background-container">
+                <div class="background-image"></div>
+                <svg class="crosses-overlay" width="1919" height="955" viewBox="0 0 1919 955" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:overlay" opacity="0.8">
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M1900.81 349.387H1857.43V305.999H1815.72V349.387H1772.33V391.095H1815.72V434.482H1857.43V391.095H1900.81V349.387Z" fill="#F1F2F3"/>
+                    </g>
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M1796.6 494.919H1711.66V409.988H1630.02V494.919H1545.09V576.564H1630.02V661.496H1711.66V576.564H1796.6V494.919Z" fill="#F1F2F3"/>
+                    </g>
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M1702.89 904.551H1640.45V842.117H1580.43V904.551H1518V964.57H1580.43V1027H1640.45V964.57H1702.89V904.551Z" fill="#F1F2F3"/>
+                    </g>
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M1929.69 735.898H1875.73V681.941H1823.86V735.898H1769.9V787.768H1823.86V841.725H1875.73V787.768H1929.69V735.898Z" fill="#F1F2F3"/>
+                    </g>
+                    </g>
+                    <g style="mix-blend-mode:overlay" opacity="0.8">
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M386 808.576L470.932 808.576L470.932 893.508H552.577L552.577 808.576H637.508V726.931L552.576 726.931V641.999L470.931 641.999L470.932 726.931L386 726.931L386 808.576Z" fill="#F1F2F3"/>
+                    </g>
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M54 834.551L104.758 834.551V885.308H153.551V834.551H204.309L204.309 785.757H153.551L153.551 734.999H104.758L104.758 785.757L54 785.757L54 834.551Z" fill="#F1F2F3"/>
+                    </g>
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M-48 498.867H36.9315L36.9315 583.799H118.577L118.577 498.867L203.508 498.867L203.508 417.222L118.576 417.222L118.576 332.29L36.9315 332.29L36.9315 417.222L-48 417.222L-48 498.867Z" fill="#F1F2F3"/>
+                    </g>
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M-8.99998 83.2878L33.4658 83.2877V125.754L74.2883 125.753L74.2882 83.2877L116.754 83.2877V42.4651L74.2882 42.4651V-0.000610352L33.4657 -0.000600188L33.4658 42.4651L-9 42.4652L-8.99998 83.2878Z" fill="#F1F2F3"/>
+                    </g>
+                    <g style="mix-blend-mode:color-dodge" opacity="0.2">
+                    <path d="M478 229.288L520.466 229.288V271.753L561.288 271.753L561.288 229.288L603.754 229.288V188.465L561.288 188.465V145.999L520.466 145.999L520.466 188.465L478 188.465L478 229.288Z" fill="#F1F2F3"/>
+                    </g>
+                    </g>
+                    </svg>
+                    
+            </div>
+            
+            <!-- Decorative elements -->
+            <div class="bottle-image"></div>
+            <div class="leaf-image"></div>
+            <div class="droplet-image"></div>
     
+            <ul class="stats-boxes">
+                <!-- Box 1 -->
+                <li class="stat-box">
+                    <div class="stat-icon-container">
+                        <img src="assets/stats-section/icons/Vector_1.svg" alt="Partners icon">
+                    </div>
+                    <p class="stat-text"><strong>6</strong> Trusted global and local partners</p>
+                </li>
+        
+                <!-- Box 2 -->
+                <li class="stat-box">
+                    <div class="stat-icon-container">
+                        <img src="assets/stats-section/icons/Vector_2.svg" alt="Products icon">
+                    </div>
+                    <p class="stat-text"><strong>11</strong> Top-quality breakthrough products</strong></p>
+                </li>
+        
+                <!-- Box 3 -->
+                <li class="stat-box">
+                    <div class="stat-icon-container">
+                        <img src="assets/stats-section/icons/Vector_3.svg" alt="Pharmacies icon">
+                    </div>
+                    <p class="stat-text"><strong>2000+</strong> Pharmacies and health institutions</strong></p>
+                </li>
+        
+                <!-- Box 4 -->
+                <li class="stat-box">
+                    <div class="stat-icon-container">
+                        <img src="assets/stats-section/icons/Vector_4.svg" alt="Innovations icon">
+                    </div>
+                    <p class="stat-text"><strong>10</strong> Innovations in the pipeline</strong></p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Our Story Section -->
+        <section id="story" class="story-section">
+            <h2 class="story-title">Our Story</h2>
+            <div class="timeline-line"></div>
+    
+            <!-- Timeline items -->
+            <div class="timeline-container">
+                <!-- 2010 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="assets/our_story-section/vector_1.svg" alt="Icon 1">
+                    </div>
+                    <div class="timeline-content">
+                        <p>Novectus Medical Corporation was incorporated in 2010 with the primary mission of <strong>introducing Traditional Chinese Medicine (TCM) to the mainstream of the Philippine pharmaceutical market.</strong></p>
+                    </div>
+                </div>
+    
+                <!-- Initial offering -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="assets/our_story-section/vector_2.svg" alt="Icon 2">
+                    </div>
+                    <div class="timeline-content">
+                        <p>For its initial offering, DreamWell, a non-melatonin, all-natural sleep enhancer, <strong>Novectus focused on importation</strong> and partnered with Pascual Laboratories, Inc. and its subsidiary, Pascual Consumer Healthcare Corporation for packaging, marketing, and distribution.</p>
+                    </div>
+                </div>
+    
+                <!-- 2018 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="assets/our_story-section/vector_3.svg" alt="Icon 3">
+                    </div>
+                    <div class="timeline-content">
+                        <p>In 2018, sensing the need to manage its own course in order to realize the full potential of its launch product and others in the pipeline,<strong> Novectus ventured to take charge of marketing and distribution.</strong></p>
+                    </div>
+                </div>
+    
+                <!-- 2019 -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="assets/our_story-section/vector_4.svg" alt="Icon 4">
+                    </div>
+                    <div class="timeline-content">
+                        <p>In 2019, <strong>Novectus started to expand its portfolio beyond TCM and started exploring opportunities</strong> in other breakthrough and innovative healthcare products and services.</p>
+                    </div>
+                </div>
+    
+                <!-- Today -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="assets/our_story-section/vector_5.svg" alt="Icon 5">
+                    </div>
+                    <div class="timeline-content">
+                        <p>Today, as the market has reopened completely after the pandemic, Novectus is poised to <strong>launch excellent breakthrough products with its innovative partners from Asia, North America, and Europe.</strong></p>
+                    </div>
+                </div>
+    
+                <!-- Moving forward -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <img src="assets/our_story-section/vector_6.svg" alt="Icon 6">
+                    </div>
+                    <div class="timeline-content">
+                        <p>Moving forward with its <strong>solid financial strength, strong entrepreneurial spirit, </strong> and <strong>efficient organizational structure,</strong> Novectus is committed to pursue a continuing fulfillment of its vision and mission in the service of healthier families.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- Add other timeline items similarly -->
+    
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="map-content">
+                <h2 class="map-title">Sourcing Purposeful, Innovative Health Solutions Worldwide</h2>
+                <p class="map-description">At Novectus, we carefully select innovative products from trusted global partners that help fill the gaps in unanswered healthcare needs and challenges.</p>
+                <p class="map-description-2">By bringing in clinically-proven natural remedies, and breakthrough solutions, we help make world-class healthcare accessible to local families. </p>
+    
+                <div class="map-container">
+                    <img src="assets/map/world-map.svg" alt="World Map" class="world-map">
+                    
+                    <div class="map-markers">
+                        <!-- U.S.A. -->
+                        <div class="country-marker usa-marker">
+                            <img src="assets/map/flags/usa.svg" alt="USA Flag" class="flag-icon">
+                            <span class="country-name">U.S.A.</span>
+                            <div class="marker-line"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                
+                        <!-- Estonia -->
+                        <div class="country-marker estonia-marker">
+                            <img src="assets/map/flags/estonia.svg" alt="Estonia Flag" class="flag-icon">
+                            <span class="country-name">Estonia</span>
+                            <div class="marker-line"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                
+                        <!-- Austria -->
+                        <div class="country-marker austria-marker">
+                            <img src="assets/map/flags/austria.svg" alt="Austria Flag" class="flag-icon">
+                            <span class="country-name">Austria</span>
+                            <div class="marker-line"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                
+                        <!-- Israel -->
+                        <div class="country-marker israel-marker">
+                            <img src="assets/map/flags/israel.svg" alt="Israel Flag" class="flag-icon">
+                            <span class="country-name">Israel</span>
+                            <div class="marker-line"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                
+                        <!-- Taiwan -->
+                        <div class="country-marker taiwan-marker">
+                            <img src="assets/map/flags/taiwan.svg" alt="Taiwan Flag" class="flag-icon">
+                            <span class="country-name">Taiwan</span>
+                            <div class="marker-line"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                
+                        <!-- Philippines -->
+                        <div class="country-marker philippines-marker">
+                            <img src="assets/map/flags/philippines.svg" alt="Philippines Flag" class="flag-icon">
+                            <span class="country-name">Philippines</span>
+                            <div class="marker-line"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        <!-- Partners Section -->
+        <section class="partners-section">
+            <div class="partners-content">
+                <h2 class="section-title"><strong>Our Trusted Partners</strong></h2>
+                <p class="section-text">We partner with leading global and local innovators<br>to provide top-quality healthcare products.</p>
+            </div>
+            <div class="partners-grid">
+                <!-- RedDress -->
+                <div class="partner-logo">
+                    <img src="assets/icons/partners/RedDress.svg" alt="RedDress Logo">
+                </div>
+                <!-- G.Tec -->
+                <div class="partner-logo">
+                    <img src="assets/icons/partners/G.Tec.svg" alt="G.Tec Logo">
+                </div>
+                <!-- Nordaid -->
+                <div class="partner-logo">
+                    <img src="assets/icons/partners/Nordaid.svg" alt="Nordaid Logo">
+                </div>
+                <!-- Ko Da -->
+                <div class="partner-logo">
+                    <img src="assets/icons/partners/ko_da.svg" alt="Ko Da Logo">
+                </div>
+                <!-- Vector -->
+                <div class="partner-logo">
+                    <img src="assets/icons/partners/Vector.svg" alt="Vector Logo">
+                </div>
+                <!-- Eco Elements -->
+                <div class="partner-logo">
+                    <img src="assets/icons/partners/eco_elements.svg" alt="Eco Elements Logo">
+                </div>
+            </div>
+    
+            <!-- Shop Links -->
+            <div class="shop-links">
+                <a href="#" class="shop-link">
+                    <img src="assets/icons/partners/mercury.svg" alt="Mercury Drug Store">
+                </a>
+                <a href="#" class="shop-link">
+                    <img src="assets/icons/partners/watsons.svg" alt="Watsons">
+                </a>
+                <a href="#" class="shop-link">
+                    <img src="assets/icons/partners/rosepharmacy.svg" alt="Rose Pharmacy">
+                </a>
+                <a href="#" class="shop-link">
+                    <img src="assets/icons/partners/shopee.svg" alt="Shopee">
+                </a>
+                <a href="#" class="shop-link">
+                    <img src="assets/icons/partners/lazada.svg" alt="Lazada">
+                </a>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Start Your World Class Wellness Journey With Us</h2>
+                <p class="cta-text">Browse through a wide selection of innovative and effective products from around the world. Discover the best solutions for you and your family's health and wellness.</p>
+                <a href="#" class="cta-button">Browse Products</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Logo -->
+        <a href="#landing" class="footer-logo"><img src="assets/footer/novectus-logo-footer.svg" alt="Novectus Logo"></a>
+        
+        <!-- Links Section -->
+        <div class="footer-links">
+            <!-- About Us Column -->
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="about.html#mission">Our Mission</a></li>
+                    <li><a href="about.html#vision">Our Vision</a></li>
+                    <li><a href="about.html#story">Our Story</a></li>
+                </ul>
+            </div>
+            <!-- Products Column -->
+            <div class="footer-column">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="https://dreamwell.ph/" target="_blank">DreamWell</a></li>
+                    <li><a href="https://herbsoftheearth.com/" target="_blank">Herbs of the Earth</a></li>
+                    <li><a href="#">Superior Source Vitamins</a></li>
+                    <li><a href="#">NutriQk</a></li>
+                    <li><a href="#">VitaMini</a></li>
+                </ul>
+            </div>
+            <!-- Contact Us Column -->
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p><a href="contact.html">Got questions or feedback?<br>We'd love to hear from you!</a></p>
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="#" class="social-icon">
+                        <img src="assets/footer/facebook-logo-footer.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="assets/footer/instagram-logo-footer.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="assets/footer/linkedin-logo-footer.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Copyright Text -->
+        <div class="footer-bottom">
+            <p class="fineprint">
+                <strong>Terms and Conditions | Privacy Policy</strong><br>
+                <small>&copy;2024 Novectus Medical Corporation<br>
+                    All Rights Reserved
+                </small>
+            </p>
+        </div>
+
+        
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>

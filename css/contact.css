@@ -1,0 +1,329 @@
+/* Contact Hero Section */
+.landing {
+    position: relative;
+    height: 667px;
+    width: 100%;
+    margin: 0;
+
+    background: linear-gradient(to left, 
+    #8DCF4F 0%,
+    #018E47 96%
+);
+    overflow: hidden;
+}
+
+.contact-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -250px;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/contact_page/contact-hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+}
+
+.contact-hero-content {
+    position: relative;
+    max-width: 1033px;
+    margin: 0 auto;
+    padding: 55px 20px 0;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.contact-hero-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 auto 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-hero-description {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.4;
+
+    opacity: 0.95;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); /* Increased shadow */
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 126px 100px;
+    background: #FFFFFF;
+}
+
+.contact-frame {
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+    height: 830px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    display: flex;
+    position: relative;
+}
+
+/* Left Side - Contact Information */
+.contact-info {
+    width: 696px;     /* Matches Figma frame width */
+    height: 830px;    /* Matches Figma frame height */
+    background: #E7F5D9; /* Converted from Figma RGB values */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 0 0 20px;
+}
+
+
+/* Move the DNA pattern here */
+.contact-info::before {
+    content: '';
+    position: absolute;
+    width: 350.28px;  /* Exact width from Figma */
+    height: 830.89px; /* Exact height from Figma */
+    top: 1px;   /* Exact top position from Figma */
+    left: 380.95px;    /* Exact left position from Figma */
+    background-image: url('../assets/contact_page/dna.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform-origin: right bottom;
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
+.contact-info-content {
+    padding: 141px 174px;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-info h2 {
+    color: #018F47;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Right Side - Contact Form */
+.contact-form {
+    width: 676px;
+    padding: 78px 100px;
+    margin-left: 174px;
+}
+
+.contact-form h2 {
+    color: #018F47;
+    font-size: 36px;
+    margin-bottom: 73px;
+}
+
+.form-group {
+    margin-bottom: 51px;
+    width: 100%; /* Ensure full width */
+}
+
+.form-row {
+    display: flex;
+    gap: 50px;
+    width: 100%; /* Ensure full width */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #8DCF4F;
+    padding: 5px 0;
+    font-size: 24px;
+    color: #181818;
+    background: transparent;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* For the split inputs (email and contact number) */
+.form-row .form-group {
+    flex: 1; /* Make each input take equal space */
+    width: 100%; /* Ensure full width within its container */
+}
+
+
+
+/* Add placeholder styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #B3B3B3;
+    opacity: 0.6;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Add focus effects */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #018F47;
+    box-shadow: 0 2px 4px rgba(1, 143, 71, 0.1);
+}
+
+/* Style the textarea specifically */
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #8DCF4F;
+    padding: 5px 0;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #181818;
+    background: transparent;
+    transition: all 0.3s ease;
+    outline: none;
+    resize: none;
+    height: 80px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Style the textarea placeholder */
+.form-group textarea::placeholder {
+    color: #B3B3B3;
+    opacity: 0.6;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+/* Update label styling */
+.form-group label {
+    display: block;
+    color: #868686;
+    font-size: 20px;
+    margin-bottom: 22px;
+    font-weight: 500;
+}
+
+.submit-button {
+    width: 281.29px;
+    height: 80px;
+    border: 3.58px solid #018F47;
+    border-radius: 17.2px;
+    background: transparent;
+    color: #018F47;
+    font-size: 31px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: -15px;
+}
+
+.submit-button:hover {
+    background: #018F47;
+    color: #FFFFFF;
+}
+
+/* Contact Icons */
+.icon-circle {
+    width: 59px;
+    height: 59px;
+    border: 2px solid #018F47;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-item span {
+    color: #181818;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Social Media Icons */
+.contact-details .social-links {
+    display: flex;
+    gap: 13px;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 70px;
+    left: 1535px;
+}
+
+.contact-details .social-icon {
+    width: 43.2px;
+    height: 43.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-details .social-icon img {
+    width: 39.6px;
+    height: 39.6px;
+    filter: brightness(0) saturate(100%) invert(28%) sepia(97%) saturate(1124%) hue-rotate(134deg) brightness(93%) contrast(103%);
+    transition: filter 0.3s ease;
+}
+
+
+.contact-info .social-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(92%) contrast(93%);
+}
+
+/* Update the contact-item for location to remove any extra margin */
+.contact-item:last-of-type {
+    margin-bottom: 0;
+} 
+
+
+/* Contact Form Social Links */
+.contact-info .social-links {
+    display: flex;
+    gap: 13px;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 80px;
+    left: 175px;
+}
+
+.contact-info .social-icon img {
+    width: 39.6px;
+    height: 39.6px;
+    filter: brightness(0) saturate(100%) invert(28%) sepia(97%) saturate(1124%) hue-rotate(134deg) brightness(93%) contrast(103%); /* Green color */
+}
+
+.contact-info .social-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(92%) contrast(93%); /* Gray color */
+}
