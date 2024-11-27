@@ -1,40 +1,43 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.fixed-navbar');
     const navLogo = document.querySelector('.nav-logo');
     const scrollThreshold = 50;
-    
-    // Only apply scroll behavior on index.html
-    const isIndexPage = window.location.pathname === '/' || 
-                       window.location.pathname.includes('index.html');
+    const isAboutPage = window.location.pathname.includes('about.html');
+    const isIndexPage = window.location.pathname === '/' || window.location.pathname.includes('index.html');
+    let lastScroll = 0;
 
     function updateNavbar() {
-        if (!isIndexPage) {
-            navbar.classList.add('scrolled');
-            return;
-        }
+        const currentScroll = window.pageYOffset;
 
-        if (window.scrollY > scrollThreshold) {
+        // Always add 'scrolled' class on all pages except the index
+        if (!isIndexPage || currentScroll > scrollThreshold) {
             navbar.classList.add('scrolled');
-            // Add smooth class for transition
-            navbar.classList.add('smooth-transition');
-            // Add shrink class to logo
             navLogo.classList.add('shrink');
         } else {
             navbar.classList.remove('scrolled');
-            navbar.classList.remove('smooth-transition');
-            // Remove shrink class from logo
             navLogo.classList.remove('shrink');
         }
+
+        // Hide navbar only on the index page
+        if (isIndexPage && !isAboutPage) {
+            if (currentScroll > lastScroll && currentScroll > scrollThreshold) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+        }
+
+        lastScroll = currentScroll;
     }
 
     // Initial check
     updateNavbar();
 
-    // Add scroll event listener with throttling
+    // Throttle scroll updates
     let ticking = false;
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (!ticking) {
-            window.requestAnimationFrame(function() {
+            window.requestAnimationFrame(function () {
                 updateNavbar();
                 ticking = false;
             });

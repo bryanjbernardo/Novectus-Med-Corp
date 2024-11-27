@@ -92,4 +92,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateActiveDot();
+
+    // Landing page animation
+    const landingText = document.querySelector('.landing-text');
+    const landingImage = document.querySelector('.landing-image');
+    
+    // Initial state - hide elements
+    landingText.style.opacity = '0';
+    landingText.style.transform = 'translateY(50px)';
+    landingImage.style.opacity = '0';
+    landingImage.style.transform = 'translateX(50px)';
+    
+    // Trigger animations after a short delay
+    setTimeout(() => {
+        // Animate text
+        landingText.style.transition = 'all 1s ease-out';
+        landingText.style.opacity = '1';
+        landingText.style.transform = 'translateY(0)';
+        
+        // Animate image with a slight delay
+        setTimeout(() => {
+            landingImage.style.transition = 'all 1s ease-out';
+            landingImage.style.opacity = '1';
+            landingImage.style.transform = 'translateX(0)';
+        }, 300);
+    }, 200);
 }); 

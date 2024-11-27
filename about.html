@@ -2,10 +2,13 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <link href="./css/about.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/cta-button.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>About Us - Novectus Medical Corporation</title>
 </head>
 <body>
@@ -373,7 +376,7 @@
                 <ul>
                     <li><a href="https://dreamwell.ph/" target="_blank">DreamWell</a></li>
                     <li><a href="https://herbsoftheearth.com/" target="_blank">Herbs of the Earth</a></li>
-                    <li><a href="#">Superior Source Vitamins</a></li>
+                    <li><a href="https://superiorsourcevitamins.com/" target="_blank">Superior Source Vitamins</a></li>
                     <li><a href="#">NutriQk</a></li>
                     <li><a href="#">VitaMini</a></li>
                 </ul>
@@ -410,8 +413,58 @@
 
         
     </footer>
+   
+    <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer for animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.2
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Select all elements to animate
+    const elementsToAnimate = document.querySelectorAll(`
+        .landing,
+        .vision-container,
+        .mission-container,
+        .vision-image,
+        .mission-image,
+        .stats-boxes .stat-box,
+        .timeline-item,
+        .partners-content,
+        .partner-logo,
+        .map-content,
+        .map-title,
+        .map-description,
+        .map-description-2,
+        .contact-frame,
+        .cta-title,
+        .cta-text
+    `);
+
+    // Start observing each element
+    elementsToAnimate.forEach(element => {
+            observer.observe(element);
+        });
+    });
+    </script>
 
     <script src="js/navbar.js"></script>
     <script src="js/scroll.js"></script>
+    
+    
+  
 </body>
 </html>

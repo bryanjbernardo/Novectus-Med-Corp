@@ -1,0 +1,267 @@
+/* ========================================================================== 
+   NAVIGATION
+   ========================================================================== */
+
+   .fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 119px;
+    background: transparent;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 0 98px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Scrolled state */
+.fixed-navbar.scrolled {
+    background-color: #FFFFFF;
+    height: 100px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.fixed-navbar.scrolled .nav-links li ul {
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.nav-logo {
+    position: absolute;
+    left: 18%;
+    transform: translateX(-50%) scale(1.5);
+    top: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.nav-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.5s ease;
+}
+
+.fixed-navbar.scrolled .nav-logo {
+    left: 145px;
+    transform: translateX(0) scale(1);
+    width: 220px;
+    top: 5px;
+}
+
+/* Navigation links */
+.nav-links {
+    position: absolute;
+    right: 180px;
+    top: 70px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    transition: all 0.5s ease;
+}
+
+.fixed-navbar.scrolled .nav-links {
+    top: 35px;
+    right: 200px;
+}
+
+.nav-links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #868686;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus,
+.nav-links li a.active {
+    color: #018E47;
+    font-weight: 600;
+}
+
+/* Dropdown menu */
+.nav-links li ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -20px;
+    background-color: rgba(255, 255, 255, 0.98);
+    min-width: 250px;
+    padding: 20px 0;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(1, 142, 71, 0.1);
+    backdrop-filter: blur(10px);
+    transform-origin: top;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Show dropdown on hover with animation */
+.nav-links li:hover ul {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Dropdown items styling */
+.nav-links li ul li {
+    padding: 12px 30px;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li ul li a {
+    color: #868686;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.nav-links li ul li:hover {
+    background: linear-gradient(
+        to right,
+        rgba(1, 142, 71, 0.05),
+        rgba(141, 207, 79, 0.05)
+    );
+}
+
+.nav-links li ul li a:hover {
+    color: #018E47;
+    transform: translateX(8px);
+}
+
+/* Add icons before dropdown items */
+.nav-links li ul li a::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #018E47;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li ul li a:hover::before {
+    opacity: 1;
+}
+
+/* Enhanced arrow animation */
+.arrow {
+    display: inline-flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links li:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Add subtle border top to dropdown */
+.nav-links li ul::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        rgba(1, 142, 71, 0.1),
+        rgba(141, 207, 79, 0.1)
+    );
+}
+
+/* Add hover glow effect */
+.nav-links li ul li a:hover {
+    text-shadow: 0 0 1px rgba(1, 142, 71, 0.3);
+}
+
+/* Add hover intent area */
+.nav-links li ul::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
+/* Add animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations to dropdown items */
+.nav-links li ul li {
+    animation: fadeInUp 0.3s ease forwards;
+    opacity: 0;
+}
+
+.nav-links li ul li:nth-child(1) { animation-delay: 0.1s; }
+.nav-links li ul li:nth-child(2) { animation-delay: 0.2s; }
+.nav-links li ul li:nth-child(3) { animation-delay: 0.3s; }
+.nav-links li ul li:nth-child(4) { animation-delay: 0.4s; }
+
+/* NAV BAR ENDS */
+
+/* NAV BAR ANIMATIONS */
+
+/* Update the active state color */
+.nav-links li a.active {
+    color: #018E47 !important;  /* Using !important to ensure it takes precedence */
+    font-weight: 600;
+}
+
+/* Keep hover state separate and less specific */
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: rgb(7, 131, 69);
+    font-weight: 600;
+}

@@ -169,6 +169,8 @@ a {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .text-content {
@@ -198,6 +200,8 @@ a {
     width: 1105px;
     height: 737px;
     margin-right: -100px;
+    opacity: 0;
+    transform: translateX(50px);
 }
 
 .landing-image img {
@@ -205,6 +209,7 @@ a {
     height: 100%;
     object-fit: contain;
     filter: drop-shadow(-2px 2px 16px rgba(0, 0, 0, 0.25));
+    animation: float 6s ease-in-out infinite;
 }
 
 /* Learn More button specific to landing */
@@ -230,6 +235,8 @@ a {
 .landing-text .learn-more-btn:hover {
     background-color: #018E47;
     color: #FFFFFF;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(1, 142, 71, 0.3);
 }
 
 /* Responsive adjustments */
@@ -624,6 +631,7 @@ a {
     text-align: center;
     letter-spacing: -0.02em;
 }
+
 
 
 

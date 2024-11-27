@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/contact.css">
     <link rel="stylesheet" href="./css/cta-button.css">
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/global.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Novectus Medical Corporation</title>
@@ -236,15 +237,6 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 
 // Select all elements to animate
 const elementsToAnimate = document.querySelectorAll(`
-    .vision-container,
-    .mission-container,
-    .vision-image,
-    .mission-image,
-    .stats-boxes .stat-box,
-    .timeline-item,
-    .partners-content,
-    .partner-logo,
-    .map-content,
     .contact-frame
 `);
 
@@ -253,50 +245,9 @@ elementsToAnimate.forEach(element => {
     observer.observe(element);
 });
 
-// Optional: Add initial animation delay for elements above the fold
-document.addEventListener('DOMContentLoaded', () => {
-    const initialDelay = 500; // 500ms delay before starting animations
-    
-    setTimeout(() => {
-        const aboveFoldElements = document.querySelectorAll('.hero-content, .hero-title, .hero-description');
-        aboveFoldElements.forEach(element => {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        });
-    }, initialDelay);
-});
 
-// Add this to your existing script
-document.addEventListener('DOMContentLoaded', () => {
-    const mapObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Reset animations by removing and re-adding classes
-                const markers = entry.target.querySelectorAll('.country-marker');
-                markers.forEach(marker => {
-                    marker.querySelector('.marker-dot').style.animation = 'none';
-                    marker.querySelector('.marker-line').style.animation = 'none';
-                    marker.querySelector('.country-name').style.animation = 'none';
-                    
-                    // Force reflow
-                    void marker.offsetWidth;
-                    
-                    // Re-add animations
-                    marker.querySelector('.marker-dot').style.animation = '';
-                    marker.querySelector('.marker-line').style.animation = '';
-                    marker.querySelector('.country-name').style.animation = '';
-                });
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
+  
 
-    const mapSection = document.querySelector('.map-container');
-    if (mapSection) {
-        mapObserver.observe(mapSection);
-    }
-});
 </script>
 <script src="js/navbar.js"></script>
 </body>
