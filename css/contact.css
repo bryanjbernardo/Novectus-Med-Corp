@@ -256,7 +256,7 @@
 
 .contact-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
 }
 

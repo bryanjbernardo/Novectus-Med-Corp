@@ -728,11 +728,13 @@ h1, h2, h3 {
     width: 100%;
     align-items: center;
     justify-content: center;
-    max-width: 1300px; /* Increased from 900px */
+    /* max-width: 1300px; */
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap; /* Allow logos to wrap */
-    gap: 20px; /* Increased gap */
+    gap: 12px;
+
+    padding: 0 10px;
 }
 
 .partner-logo {
@@ -742,7 +744,7 @@ h1, h2, h3 {
     background: #fff;
     border-radius: 50%;
     padding: 30px; /* Increased padding */
-    width: 180px; /* Set fixed width */
+    /* width: 180px; */
     height: 200px; /* Set fixed height */
     transition: transform 0.3s ease;
 }
@@ -752,7 +754,8 @@ h1, h2, h3 {
 }
 
 .partner-logo img {
-    width: 150px; /* Set fixed width for images */
+    min-width: 150px;
+    max-width: 644px;
     height: 150px; /* Set fixed height for images */
     object-fit: contain;
 }
