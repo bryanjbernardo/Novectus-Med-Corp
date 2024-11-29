@@ -42,9 +42,10 @@
         
         <!-- Adobe Typekit font stylesheet link -->
         <link rel="stylesheet" href="https://use.typekit.net/gby6ddy.css">
+
         <!-- External CSS -->
         <link rel="stylesheet" href="https://bryanjbernardo.github.io/Novectus-Med-Corp/css/normalize.css">
-        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/secondary-navbar.css">
         <link rel="stylesheet" href="./css/about.css">
         <link rel="stylesheet" href="./css/products.css">
         <link rel="stylesheet" href="./css/footer.css">
@@ -60,36 +61,34 @@
         <!-- Hero Section -->
         <section class="product-hero-overlay">
             <div class="product-hero-content">
-                <h1 class="product-hero-title">Discover the Global Breakthrough <br>  Solutions for Healthier Families</h1>
-                <p class="product-hero-description">We offer a wide range of top-quality healthcare products from around the world. Browse&nbsp;and find solutions to your family&apos;s health and wellness needs.</p>
+                <h1 class="product-hero-title">Discover the Global Breakthrough <br> Solutions for Healthier Families</h1>
+                <p class="product-hero-description">We offer a wide range of top-quality healthcare products from around the world. Browse&nbsp;and find solutions to your family's health and wellness needs.</p>
             </div>
         </section>
-        <!-- Main site navigation -->
-        <nav class="fixed-navbar">
-        <!-- Company logo and name  -->
-        <a href="index.html" class="nav-logo">
-            <img src="assets/footer/novectus-logo-footer.svg" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design." height="30">
-        </a> 
-        <!-- Navigation -->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li>
-                <a href="products.html" class="active">
-                    Products
-                    <span class="arrow">
-                        <img src="./product-button.svg" alt="dropdown arrow">
-                    </span>
-                </a>
-                <ul>
-                    <li><a href="#">Natural Medicines</a></li>
-                    <li><a href="#">Highly Bioavailable Vitamins & Minerals</a></li>
-                    <li><a href="#">World-Class Supplements</a></li>
-                    <li><a href="#">Health Devices</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        
+        <!-- Only keep this navbar -->
+        <nav class="secondary-navbar">
+            <a href="index.html" class="secondary-nav-logo">
+                <img src="./assets/footer/novectus-logo-footer.svg" alt="Logo">
+            </a>
+            
+            <ul class="secondary-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <a href="#" class="dropdown-trigger">
+                        Products
+                        <img src="./product-button.svg" alt="arrow" class="arrow">
+                    </a>
+                    <ul>
+                        <li><a href="#natural-medicines">Natural Medicines</a></li>
+                        <li><a href="#vitamins">Highly-Bioavailable Vitamins & Minerals</a></li>
+                        <li><a href="#supplements">World-Class Supplements</a></li>
+                        <li><a href="#devices">Breakthrough Health Devices</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -318,6 +317,86 @@
                         </a>
                     </div>
                 </div>
+                <!-- Product 7: VitaMini -->
+                <article class="product-card vitamini">
+                    <div class="product-image-container">
+                        <img src="./images/products-page/vitamini-on-white.webp" alt="VitaMini product image">
+                    </div>
+                    <div class="product-info">
+                        <h3>VitaMini</h3>
+                        <p>VitaMini is the first and only ultra-mini sublingual supplement line in the Philippines. These molded MicroLingual® tablets dissolve immediately under the tongue, resulting in quick absorption into the body where potency isn't lost in the high acid environment of the stomach.</p>
+                        <ul class="product-features">
+                            <li><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/products-page/usp-icons/vitamini/easy-to-take.svg" alt="Easy to take icon">Easy-to-Take, No Water Needed</li>
+                            <li><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/products-page/usp-icons/vitamini/quick-dissolve.svg" alt="Quick dissolve icon">Quick-Dissolve</li>
+                            <li><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/products-page/usp-icons/vitamini/quick-absorb.svg" alt="Quick absorb icon">Quick-Absorb</li>
+                            <li><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/products-page/usp-icons/vitamini/high-bioavailability.svg" alt="High bioavailability icon">High Bioavailability</li>
+                            <li><img src="https://bryanjbernardo.github.io/Novectus-Med-Corp/images/products-page/usp-icons/vitamini/high-bioavailability.svg" alt="No excipients">No excipients</li>
+                        </ul>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="learn-more-btn">Learn More</a>
+                    </div>
+                </article>
+
+                <!-- Shop Links -->
+                <div class="product-shops-wrapper">
+                    <div class="product-shop-links">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/mercury.svg" alt="Mercury Drug Store">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/watsons.svg" alt="Watsons">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/rosepharmacy.svg" alt="Rose Pharmacy">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/shopee.svg" alt="Shopee">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/lazada.svg" alt="Lazada">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 8: New Product (Placeholder) -->
+                <article class="product-card new-product">
+                    <div class="product-image-container">
+                        <img src="./images/products-page/rehmatone-on-white.webp" alt="RehmaTone product image">
+                    </div>
+                    <div class="product-info">
+                        <h3>RehmaTone</h3>
+                        <p>RehmaTone is a time-tested formula that remains a cornerstone in traditional Chinese medicine and is celebrated for its ability to nourish the kidneys and promote overall health and vitality. Comprising six core herbs—Rehmannia, Cornus, Dioscorea, Alisma, Poria, and Moutan — it offers a balanced approach to harmonizing yin and yang within the body.</p>
+                        <ul class="product-features">
+                            <li><img src="images/products-page/usp-icons/placeholder/feature1.svg" alt="Feature 1">Kidney Support and Vitality</li>
+                            <li><img src="images/products-page/usp-icons/placeholder/feature2.svg" alt="Feature 2">Immune System Boost</li>
+                            <li><img src="images/products-page/usp-icons/placeholder/feature3.svg" alt="Feature 3">Improved Digestive and Metabolic Health:</li>
+                            <li><img src="images/products-page/usp-icons/placeholder/feature4.svg" alt="Feature 4">Support for Cognitive and Emotional Well-being:</li>
+                            <li><img src="images/products-page/usp-icons/placeholder/feature5.svg" alt="Feature 5">Bone and Joint Health</li>
+                            <li><img src="images/products-page/usp-icons/placeholder/feature6.svg" alt="Feature 6">General Health Maintenance</li>
+                        </ul>
+                        <a href="#" class="learn-more-btn">Coming Soon</a>
+                    </div>
+                </article>
+
+                <!-- Shop Links -->
+                <div class="product-shops-wrapper">
+                    <div class="product-shop-links">
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/mercury.svg" alt="Mercury Drug Store">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/watsons.svg" alt="Watsons">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/rosepharmacy.svg" alt="Rose Pharmacy">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/shopee.svg" alt="Shopee">
+                        </a>
+                        <a href="#" class="product-shop-link" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/icons/partners/lazada.svg" alt="Lazada">
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -392,6 +471,7 @@
     </footer>
 
     <script src="js/navbar.js"></script>
+    <script src="js/secondary-navbar.js"></script>
   
 </body>
 </html>

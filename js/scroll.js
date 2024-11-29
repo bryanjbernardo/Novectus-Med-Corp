@@ -6,6 +6,47 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.2
     };
 
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            // Skip the navbar when applying animations
+            if (entry.target.classList.contains('secondary-navbar')) {
+                return;
+            }
+            
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Select all elements to animate, excluding the navbar
+    const elementsToAnimate = document.querySelectorAll(`
+        .about-hero-overlay,
+        .vision-container,
+        .mission-container,
+        .vision-image,
+        .mission-image,
+        .stats-boxes .stat-box,
+        .timeline-item,
+        .partners-content,
+        .partner-logo,
+        .map-content,
+        .map-title,
+        .map-description,
+        .map-description-2,
+        .contact-frame,
+        .cta-title,
+        .cta-text
+    `);
+
+    // Start observing each element
+    elementsToAnimate.forEach(element => {
+        observer.observe(element);
+    });
+
     // Scroll Progress Indicator
     const sections = document.querySelectorAll('.landing, .vision-mission, .stats-section, .story-section, .map-section, .partners-section, .cta-section');
     const dots = document.querySelectorAll('.scroll-dot');

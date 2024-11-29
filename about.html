@@ -3,16 +3,16 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/cta-button.css">
+    <link rel="stylesheet" href="./css/secondary-navbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
     <title>About Us - Novectus Medical Corporation</title>
 </head>
 <body>
-    <header class="landing">
+   
+    <header class="landing" alt="landing">
         <!-- Hero Section -->
         <section class="about-hero-overlay">
             <div class="about-hero-content">
@@ -20,33 +20,36 @@
                 <p class="about-hero-description">Novectus is committed to be a prime mover in bringing breakthrough medicines, supplements, devices, and other innovative and healthcare products from around the world to help provide more effective ways in achieving and maintaining optimum health and wellness to families.</p>
             </div>
         </section>
-        <!-- Main site navigation -->
-        <nav class="fixed-navbar" aria-label="Main navigation">
-            <!-- Company logo and name  -->
-            <a href="index.html" class="nav-logo">
-                <img src="assets/footer/novectus-logo-footer.svg" alt="Novectus Medical Corporation logo featuring stylized green leaves and red circles forming a modern design." height="30">
-            </a> 
-            <!-- Navigation Bar -->
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li>
-                    <a href="products.html">
-                        Products
-                        <span class="arrow">
-                            <img src="./product-button.svg" alt="dropdown arrow">
-                        </span>
-                    </a>
-                    <ul>
-                        <li><a href="#">Natural Medicines</a></li>
-                        <li><a href="#">Highly Bioavailable Vitamins & Minerals</a></li>
-                        <li><a href="#">World-Class Supplements</a></li>
-                        <li><a href="#">Health Devices</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
+         <!-- Replace the existing navbar with this structure -->
+    <nav class="secondary-navbar">
+        <a href="index.html" class="secondary-nav-logo">
+            <img src="./assets/footer/novectus-logo-footer.svg" alt="Logo">
+        </a>
+        
+        <ul class="secondary-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="products.html" class="dropdown-trigger">
+                    Products
+                    <img src="./product-button.svg" alt="arrow" class="arrow">
+                </a>
+                <ul>
+                    <li><a href="#">Natural Medicines</a></li>
+                    <li><a href="#">Highly Bioavailable Vitamins & Minerals</a></li>
+                    <li><a href="#">World-Class Supplements</a></li>
+                    <li><a href="#">Health Devices</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+        
     </header>
     <!-- Scroll dots navigation -->
     <nav class="scroll-progress" aria-label="Section navigation">
@@ -414,55 +417,9 @@
         
     </footer>
    
-    <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.2
-    };
-
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Select all elements to animate
-    const elementsToAnimate = document.querySelectorAll(`
-        .landing,
-        .vision-container,
-        .mission-container,
-        .vision-image,
-        .mission-image,
-        .stats-boxes .stat-box,
-        .timeline-item,
-        .partners-content,
-        .partner-logo,
-        .map-content,
-        .map-title,
-        .map-description,
-        .map-description-2,
-        .contact-frame,
-        .cta-title,
-        .cta-text
-    `);
-
-    // Start observing each element
-    elementsToAnimate.forEach(element => {
-            observer.observe(element);
-        });
-    });
-    </script>
-
-    <script src="js/navbar.js"></script>
-    <script src="js/scroll.js"></script>
+    
+    <script src="js/scroll.js"></script>s
+    <script src="js/secondary-navbar.js"></script>
     
     
   

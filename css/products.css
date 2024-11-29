@@ -134,6 +134,14 @@
     background-color: #DE1B23;
 }
 
+.vitamini .product-image-container {
+    background-color: #f15322; /* Green background for VitaMini */
+}
+
+.new-product .product-image-container {
+    background-color: #72bd42; /* Blue-grey for placeholder */
+}
+
 .product-image-container img {
     max-width: 90%;
     max-height: 80%;

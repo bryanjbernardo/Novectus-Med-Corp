@@ -127,6 +127,7 @@
     padding: 12px 30px;
     margin: 0;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-links li ul li a {
@@ -139,6 +140,32 @@
     padding: 8px 0;
     position: relative;
     transition: all 0.3s ease;
+    padding-left: 20px;
+}
+
+/* Fix the circle before dropdown items */
+.nav-links li ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #018E47;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Ensure the circle appears on hover */
+.nav-links li ul li a:hover::before {
+    opacity: 1;
+}
+
+/* Add space for longer menu items */
+.nav-links li ul {
+    min-width: 300px;
 }
 
 /* Hover effect for dropdown items */
@@ -155,23 +182,8 @@
     transform: translateX(8px);
 }
 
-/* Add icons before dropdown items */
-.nav-links li ul li a::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background-color: #018E47;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.nav-links li ul li a:hover::before {
-    opacity: 1;
-}
-
 /* Enhanced arrow animation */
-.arrow {
+.nav-links .arrow {
     display: inline-flex;
     align-items: center;
     width: 24px;
@@ -215,11 +227,23 @@
     background: transparent;
 }
 
-/* Add animation keyframes */
-@keyframes fadeInUp {
+/* Add smooth transitions for all hover effects */
+.nav-links li a,
+.nav-links li ul,
+.nav-links .arrow,
+.nav-links li ul li a::before {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add dropdown entrance animation */
+.nav-links li:hover ul {
+    animation: dropdownEnter 0.3s ease forwards;
+}
+
+@keyframes dropdownEnter {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(-10px);
     }
     to {
         opacity: 1;
@@ -227,27 +251,25 @@
     }
 }
 
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* Optional: Add hover effect on navbar items */
+.nav-links > li > a {
+    position: relative;
 }
 
-/* Apply animations to dropdown items */
-.nav-links li ul li {
-    animation: fadeInUp 0.3s ease forwards;
-    opacity: 0;
+.nav-links > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #018E47;
+    transition: width 0.3s ease;
 }
 
-.nav-links li ul li:nth-child(1) { animation-delay: 0.1s; }
-.nav-links li ul li:nth-child(2) { animation-delay: 0.2s; }
-.nav-links li ul li:nth-child(3) { animation-delay: 0.3s; }
-.nav-links li ul li:nth-child(4) { animation-delay: 0.4s; }
+.nav-links > li > a:hover::after {
+    width: 100%;
+}
 
 /* NAV BAR ENDS */
 

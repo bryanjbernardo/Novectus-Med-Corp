@@ -1,20 +1,13 @@
 /* Footer Layout */
 .footer {
-    background-color: #F1F1F1;
+    background-color: #E7F5D9;
     width: 100%;
-    /* max-width: 1920px; */
     height: auto;
-    /* margin: 0 auto; */
-    /* padding: 60px 100px 40px; */
     padding: 105px 100px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* flex-direction: column; */
-    /* min-height: 493px; */
     position: relative;
-    
     color: #868686;
 }
 
@@ -78,7 +71,6 @@
 /* Bottom Section */
 .footer-bottom {
     display: flex;
-    /* justify-content: space-between; */
     align-items: flex-end;
     margin-top: auto;
 
@@ -86,7 +78,6 @@
 width: 415px;
 height: 90px;
 left: 100px;
-/* top: 300px; */
 bottom: 5%;
 }
 

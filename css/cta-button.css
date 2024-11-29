@@ -1,6 +1,14 @@
+/* Add wrapper for CTA section */
+.cta-wrapper {
+    background-color: #E7F5D9;
+    width: 100%;
+    padding: 1px 0;
+    margin-top: -1px;
+}
+
 /* CTA Section */
 .cta-section {
-    width: 90vw; /* Changed from fixed width */
+    width: 90vw;
     min-width: 615px;
     max-width: 1718px;
     max-height: 46.3vh;
@@ -14,7 +22,6 @@
     margin: 90px auto 100px;
     position: relative;
     overflow: hidden;
-
     box-sizing: border-box;
 }
 
@@ -56,7 +63,7 @@
 .cta-button {
     width: 408px;
     height: 92px;
-    border: 3px solid #FFFFFF;
+    border: 3px solid #ffffff;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -74,3 +81,4 @@
     background: rgba(4, 184, 58, 0.822);
     transform: translateY(-2px);
 }
+

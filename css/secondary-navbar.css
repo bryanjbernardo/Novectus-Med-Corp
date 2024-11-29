@@ -1,0 +1,414 @@
+/* Secondary Navigation - for About, Products, and Contact pages */
+.secondary-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #FFFFFF;
+    z-index: 1000;
+    padding: 0 98px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* Logo styling */
+.secondary-nav-logo {
+    position: absolute;
+    left: 145px;
+    width: 220px;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.secondary-nav-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.5s ease;
+}
+
+/* Navigation links */
+.secondary-nav-links {
+    position: absolute;
+    right: 200px;
+    top: 35px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    transition: all 0.5s ease;
+}
+
+.secondary-nav-links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.secondary-nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #868686;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.secondary-nav-links li a:hover,
+.secondary-nav-links li a:focus,
+.secondary-nav-links li a.active {
+    color: #018E47;
+    font-weight: 600;
+}
+
+/* Dropdown menu */
+.secondary-nav-links li ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -20px;
+    background-color: #FFFFFF;
+    min-width: 250px;
+    padding: 20px 0;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    border: 1px solid rgba(1, 142, 71, 0.1);
+    z-index: 1001;
+}
+
+/* Enhanced arrow animation */
+.arrow {
+    display: inline-flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links li:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Add subtle border top to dropdown */
+.nav-links li ul::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        rgba(1, 142, 71, 0.1),
+        rgba(141, 207, 79, 0.1)
+    );
+}
+
+/* Add hover glow effect */
+.nav-links li ul li a:hover {
+    text-shadow: 0 0 1px rgba(1, 142, 71, 0.3);
+}
+
+/* Add hover intent area */
+.nav-links li ul::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
+/* Add animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations to dropdown items */
+.nav-links li ul li {
+    animation: fadeInUp 0.3s ease forwards;
+    opacity: 0;
+}
+
+.nav-links li ul li:nth-child(1) { animation-delay: 0.1s; }
+.nav-links li ul li:nth-child(2) { animation-delay: 0.2s; }
+.nav-links li ul li:nth-child(3) { animation-delay: 0.3s; }
+.nav-links li ul li:nth-child(4) { animation-delay: 0.4s; }
+
+/* NAV BAR ENDS */
+
+/* NAV BAR ANIMATIONS */
+
+/* Update the active state color */
+.nav-links li a.active {
+    color: #018E47 !important;  /* Using !important to ensure it takes precedence */
+    font-weight: 600;
+}
+
+/* Keep hover state separate and less specific */
+.nav-links li a:hover,
+.nav-links li a:focus {
+    color: rgb(7, 131, 69);
+    font-weight: 600;
+}
+
+/* Update the existing navbar styles to be specific to index.html */
+body.home .fixed-navbar {
+    /* existing styles */
+}
+
+/* Add this to prevent conflicts */
+body:not(.home) .fixed-navbar {
+    display: none;
+}
+/* Rest of the styles remain the same but with 'secondary-' prefix */
+/* ... (copy remaining styles from global.css but update class names) */
+
+/* Dropdown items styling */
+.secondary-nav-links li ul li {
+    padding: 12px 30px;
+    margin: 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.secondary-nav-links li ul li a {
+    color: #868686;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-left: 20px;
+}
+
+/* Fix the circle before dropdown items */
+.secondary-nav-links li ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #018E47;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Ensure the circle appears on hover */
+.secondary-nav-links li ul li a:hover::before {
+    opacity: 1;
+}
+
+/* Add space for longer menu items */
+.secondary-nav-links li ul {
+    min-width: 300px;
+}
+
+/* Show dropdown on hover with animation */
+.secondary-nav-links li:hover ul {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect for dropdown items */
+.secondary-nav-links li ul li:hover {
+    background: linear-gradient(
+        to right,
+        rgba(1, 142, 71, 0.05),
+        rgba(141, 207, 79, 0.05)
+    );
+}
+
+.secondary-nav-links li ul li a:hover {
+    color: #018E47;
+    transform: translateX(8px);
+}
+
+/* Enhanced arrow animation */
+.secondary-nav-links .arrow {
+    display: inline-flex;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.secondary-nav-links li:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Add subtle border top to dropdown */
+.secondary-nav-links li ul::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        rgba(1, 142, 71, 0.1),
+        rgba(141, 207, 79, 0.1)
+    );
+}
+
+/* Add hover glow effect */
+.secondary-nav-links li ul li a:hover {
+    text-shadow: 0 0 1px rgba(1, 142, 71, 0.3);
+}
+
+/* Add hover intent area */
+.secondary-nav-links li ul::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
+/* Add animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply animations to dropdown items */
+.secondary-nav-links li ul li {
+    animation: fadeInUp 0.3s ease forwards;
+    opacity: 0;
+}
+
+.secondary-nav-links li ul li:nth-child(1) { animation-delay: 0.1s; }
+.secondary-nav-links li ul li:nth-child(2) { animation-delay: 0.2s; }
+.secondary-nav-links li ul li:nth-child(3) { animation-delay: 0.3s; }
+.secondary-nav-links li ul li:nth-child(4) { animation-delay: 0.4s; }
+
+/* Update the active state color */
+.secondary-nav-links li a.active {
+    color: #018E47 !important;
+    font-weight: 600;
+}
+
+/* Keep hover state separate and less specific */
+.secondary-nav-links li a:hover,
+.secondary-nav-links li a:focus {
+    color: rgb(7, 131, 69);
+    font-weight: 600;
+}
+
+/* Add smooth transitions for all hover effects */
+.secondary-nav-links li a,
+.secondary-nav-links li ul,
+.secondary-nav-links .arrow,
+.secondary-nav-links li ul li a::before {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add dropdown entrance animation */
+.secondary-nav-links li:hover ul {
+    animation: dropdownEnter 0.3s ease forwards;
+}
+
+@keyframes dropdownEnter {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add subtle scale effect on logo hover */
+.secondary-nav-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Add smooth shadow transition on navbar */
+.secondary-navbar {
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Optional: Add hover effect on navbar items */
+.secondary-nav-links > li > a {
+    position: relative;
+}
+
+.secondary-nav-links > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #018E47;
+    transition: width 0.3s ease;
+}
+
+.secondary-nav-links > li > a:hover::after {
+    width: 100%;
+}
+
+/* Add class for hiding navbar */
+.secondary-navbar.hide {
+    transform: translateY(-100%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+} 
