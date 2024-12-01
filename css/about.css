@@ -476,7 +476,7 @@ h1, h2, h3 {
     background-color: #FFFFFF;
     padding-top: 86px;
     position: relative;
-    /* max-width: 1920px; */
+    max-width: 1920px;
     margin: 0 auto; /* Center the content */
 }
 
