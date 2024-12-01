@@ -160,7 +160,7 @@ a {
     display: flex;
     justify-content: space-between;
     /* padding: 312px 170px 0; <- revised to keep ratio on larger screens */
-    padding: 312px 8.85% 0;
+    padding: 312px 8.85%;
     /* max-width: 1920px; <- removed for larger screens */
     margin: 0 auto;
 
@@ -217,7 +217,7 @@ a {
     filter: drop-shadow(-2px 2px 16px rgba(0, 0, 0, 0.25));
     animation: float 6s ease-in-out infinite;
    
-    width: 1105px;
+    max-width: 1105px;
     /* fixed to bottom of container to prevent floating on different screen ratio and size */
     position: absolute;
     aspect-ratio: 1105/737;
