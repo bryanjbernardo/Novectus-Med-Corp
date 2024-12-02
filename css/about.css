@@ -70,14 +70,16 @@ h1, h2, h3 {
 .about-hero-overlay::before {
     content: '';
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url('../assets/about-hero/about-hero-bg.webp');
-    background-size: cover;
-    background-position: center 75%;
+    height: 150%;
+    background-image: url('../images/add_bg/about_bg6.jpg');
+    background-size: cover; /* Keep cover */
+    background-position: center;
     opacity: 0.15;
+    transform: scale(1.02); /* Scale down to 80% */
+    transform-origin: center; /* Scale from the center */
     mix-blend-mode: multiply;
 }
 
