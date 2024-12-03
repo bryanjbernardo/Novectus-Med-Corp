@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.fixed-navbar');
+    
+    // Only proceed if navbar exists
+    if (!navbar) return;
+    
     const navLogo = document.querySelector('.nav-logo');
     const scrollThreshold = 50;
     const isAboutPage = window.location.pathname.includes('about.html');
@@ -12,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // Always add 'scrolled' class on all pages except the index
         if (!isIndexPage || currentScroll > scrollThreshold) {
             navbar.classList.add('scrolled');
-            navLogo.classList.add('shrink');
+            navLogo?.classList.add('shrink');
         } else {
             navbar.classList.remove('scrolled');
-            navLogo.classList.remove('shrink');
+            navLogo?.classList.remove('shrink');
         }
 
         // Hide navbar only on the index page
