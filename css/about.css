@@ -136,7 +136,7 @@ h1, h2, h3 {
 .vision-container,
 .mission-container {
     position: absolute;
-    width: 676px;
+    width: 696px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -173,7 +173,7 @@ h1, h2, h3 {
     color: #181818;
     line-height: 1.75;
     margin: 0;
-    width: 676px;
+    width: 696px;
 }
 
 /* Images */

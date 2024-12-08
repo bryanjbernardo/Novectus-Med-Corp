@@ -39,6 +39,26 @@
     mix-blend-mode: multiply;
 }
 
+.natural-page-hero::before {
+    background: url('../images/home-page/natural-medicines.webp') center calc(33%) / cover;
+    filter: blur(2px);
+}
+
+.supplements-page-hero::before {
+    background: url('../images/home-page/gummies-bento.webp') center calc(75%) / cover;
+    filter: blur(2px);
+}
+
+.bioavailable-vitamins-page-hero::before {
+    background: url('../images/home-page/nordaid-bento.webp') center calc(95%) / cover;
+    filter: blur(6px);
+}
+
+.medical-devices-page-hero::before {
+    background: url('../images/add_bg/recoverix_2.webp') center calc(110%) / cover;
+    filter: blur(2px);
+}
+
 .product-hero-content {
     position: relative;
     max-width: 1069px;
@@ -148,6 +168,10 @@
     object-fit: contain;
     border-radius: 10px;
     box-shadow: 0px 16px 32px -8px rgba(12, 12, 13, 0.4);
+}
+
+.product-image-container .recoverix-model{
+    transform: scaleX(-1);
 }
 
 .product-info {
