@@ -791,6 +791,608 @@ a {
 }
 
 
+/* Add this to ensure proper scaling */
+@media (min-width: 1920px) {
+    body {
+        font-size: 1.5rem; /* Adjust base font size for scaling */
+    }
+
+    .testimonial-card {
+        max-width: 45%; /* Adjust max-width for larger screens */
+        padding: 60px 100px; /* Increase padding for better spacing */
+    }
+
+    .testimonial-card p,
+    .testimonial-card cite,
+    .testimonial-card footer span {
+        font-size: 1.5rem; /* Increase font size for better readability */
+    }
+}
+
+/* Ensure images are responsive */
+.testimonial-card img {
+    max-width: 100%; /* Ensures the image stays within the card */
+    height: auto;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .testimonial-card {
+        max-width: 90%; /* Allow more width on smaller screens */
+        padding: 30px 50px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Extra Large Screens (above 1920px) */
+@media screen and (min-width: 1921px) {
+    /* Global Typography Scaling */
+    body {
+        font-size: 18px;
+    }
+
+    /* Landing Section */
+    .landing-text h1 {
+        font-size: 56px;
+        line-height: 72px;
+    }
+
+    .landing-text p {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    /* About Us Section */
+    .about-content p {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        max-width: 45%;
+        padding: 60px 100px;
+    }
+}
+
+/* Large Screens (1441px - 1920px) */
+@media screen and (max-width: 1920px) {
+    /* Landing Section */
+    .landing-content {
+        padding: 250px 6% 0;
+    }
+
+    .landing-image {
+        max-width: 900px;
+    }
+
+    /* About Us Section */
+    .about-content {
+        right: 8%;
+        width: 35vw;
+    }
+}
+
+/* Medium-Large Screens (1201px - 1440px) */
+@media screen and (max-width: 1440px) {
+    /* Landing/Hero Section */
+    #landing {
+        min-height: 90vh;
+        position: relative;
+        overflow: hidden;
+        background: #FFFFFF;
+    }
+
+    .landing-content {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 120px 5% 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .landing-text {
+        max-width: 500px;
+        margin-top: -80px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .landing-text h1 {
+        font-size: 32px;
+        line-height: 1.3;
+        color: #018E47;
+        margin-bottom: -10px;
+        margin-left: 45px;
+        max-width: 350px;
+        margin-top: -5px;
+    }
+
+    .landing-text p {
+        font-size: 23px;
+        line-height: 1.4;
+        color: #181818;
+        margin-bottom: 10px;
+        max-width: 350px;
+        margin-left: 45px;
+    }
+    
+    .learn-more-btn {
+        scale: 0.7;
+        margin-left: -5px;
+        margin-top: -50px;
+        
+    }
+
+    .landing-image {
+        position: absolute;
+        right: 2%;
+        top: 25%;
+        width: 55%;
+        height: 75%;
+        z-index: 1;
+    }
+
+    .map-section {
+        position: relative;
+        scale: 0.7;
+        right: 10%;
+        top: -20px;
+    }
+
+    .map-section .map-content {
+        margin-top: -120px;
+        
+    }
+
+    /* .map-section .map-title {
+        font-size: 42px;
+        margin-bottom: 60px;
+        margin-left: 570px;
+    } */
+
+   .partners-section {
+    scale: 0.8;
+    position: relative;
+    top: -100px; 
+    
+   }
+
+   .partners-section .section-title {
+    font-size: 42px;
+    margin-top: -200px;
+    margin-left: 0px;
+   }
+
+  
+   /* Bento Box Section */
+   #bento-box {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 60px 5%;
+        position: relative;
+        z-index: 2;
+    }
+
+    #bento-box h2 {
+        font-size: 42px;
+        margin-bottom: 60px;
+        text-align: center;
+        color: #018E47;
+    }
+
+    .product-flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .product-group {
+        position: relative;
+        height: 350px;  /* Reduced height */
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .product-group figure {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .product-group img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .product-group figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        min-height: 120px;  /* Minimum height for content */
+        padding: 25px;
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 60%, transparent);
+        color: #FFFFFF;
+        transform: translateY(calc(100% - 120px));  /* Show only title initially */
+        transition: transform 0.3s ease;
+    }
+
+    .product-group h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        color: #FFFFFF;
+    }
+
+    .product-group p {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+    }
+
+    .product-group a {
+        display: inline-block;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 600;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease 0.1s;
+    }
+
+    /* Hover Effects */
+    .product-group:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .product-group:hover img {
+        transform: scale(1.1);
+    }
+
+    .product-group:hover figcaption {
+        transform: translateY(0);  /* Show full caption */
+        background: linear-gradient(
+        90deg,
+        rgba(1, 142, 71, 0.85) 0%,
+        rgba(141, 207, 79, 0.85) 100%
+    );
+    }
+
+    .product-group:hover p,
+    .product-group:hover a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* About Us Section */
+#about-us {
+    width: 100%;
+    max-width: 1440px;
+    margin: 80px auto;
+    padding: 0 5%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: -100px;
+}
+
+.about-image {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    left: -3%;
+    top: -40px;
+  
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-content {
+    width: 100%;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+    left: -2%;
+    top: 15px;
+}
+
+.about-content h2 {
+    font-size: 30px;
+    color: #018E47;
+    margin-bottom: 0px;
+    line-height: 1.2;
+    max-width: 900px;
+    
+}
+
+.about-content p:first-of-type {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #181818;
+    margin-bottom: -10px;
+    
+}
+
+.about-content p:last-of-type {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #181818;
+    margin-bottom: 20px;
+    margin-left: 0px;
+
+}
+
+.about-content .learn-more-btn {
+    width: 280px;
+    height: 70px;
+    font-size: 24px;
+    padding: 15px 30px;
+    border: 3px solid #018E47;
+    border-radius: 16px;
+    background: transparent;
+    color: #018E47;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+.about-content .learn-more-btn:hover {
+    background: #018E47;
+    color: #FFFFFF;
+        transition: all 0.3s ease;
+    }
+
+}
 
 
+
+/* Medium Screens (993px - 1200px) */
+@media screen and (max-width: 1200px) {
+    /* Landing Section */
+    .landing-content {
+        padding: 180px 5% 0;
+    }
+
+    .landing-text {
+        position: relative;
+        top: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .landing-image {
+        position: relative;
+        right: auto;
+        max-width: 80%;
+        margin: 50px auto 0;
+    }
+
+    /* About Us Section */
+    #about-us {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .about-image img {
+        position: relative;
+        left: auto;
+        top: auto;
+        max-width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .about-content {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: 80%;
+        margin: 40px auto;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        text-align: center;
+    }
+}
+
+/* Tablet Screens (769px - 992px) */
+@media screen and (max-width: 992px) {
+    /* Global Typography */
+    h2 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    /* Products Bento Box */
+    .product-flex {
+        padding: 0 50px;
+    }
+
+    .product-group {
+        flex: 0 1 calc(100% - 21px);
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        min-width: 280px;
+        padding: 40px 60px;
+    }
+
+    .testimonial-card p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+/* Mobile Screens (481px - 768px) */
+@media screen and (max-width: 768px) {
+    /* Landing Section */
+    .landing-text h1 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .landing-text p {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .landing-text .learn-more-btn {
+        width: 280px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+    /* About Us Section */
+    .about-content p {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    /* Testimonials */
+    .testimonials-header p {
+        font-size: 24px;
+        line-height: 32px;
+        padding: 0 20px;
+    }
+}
+
+/* Small Mobile Screens (320px - 480px) */
+@media screen and (max-width: 480px) {
+    /* Global Typography */
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    /* Landing Section */
+    .landing-content {
+        padding: 120px 20px 0;
+    }
+
+    .landing-text h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .landing-text p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    /* Products Bento Box */
+    .product-flex {
+        padding: 0 20px;
+    }
+
+    .product-group h3 {
+        font-size: 28px;
+    }
+
+    .product-group p {
+        font-size: 18px;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        min-width: 260px;
+        padding: 30px 40px;
+    }
+
+    .testimonial-card p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+/* Bento Box Hover Animations */
+.product-group figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 120px;
+    padding: 25px;
+    background: linear-gradient(
+        90deg,
+        rgba(1, 142, 71, 0.85) 0%,
+        rgba(141, 207, 79, 0.85) 100%
+    );
+    color: #FFFFFF;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-group h3 {
+    transform: translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-group p,
+.product-group a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effects */
+.product-group:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-group:hover h3 {
+    transform: translateY(0);
+}
+
+.product-group:hover img {
+    transform: scale(1.05);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-group:hover p,
+.product-group:hover a {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.product-group {
+    position: relative;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
 

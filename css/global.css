@@ -31,14 +31,11 @@
 
 /* Logo Home Page styling */
 .nav-logo {
-    position: absolute;
-    left: 21%;
-    transform: translateX(-50%) scale(1.5);
-    top: 50px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    transition: all 0.5s ease;
+    position: relative;
+    width: 480px;
+    top: 70px;
+    left: 20px;
+    z-index: 100;
 }
 
 .nav-logo img {
@@ -286,4 +283,80 @@
 .nav-links li a:focus {
     color: rgb(7, 131, 69);
     font-weight: 600;
+}
+
+/* Medium-Large Screens (1201px - 1440px) */
+@media screen and (max-width: 1440px) {
+
+       /* Navigation Bar Adjustments */
+       .fixed-navbar {
+        padding: 8px 3%;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+
+    }
+
+    .nav-logo {
+        width: 400px;
+        margin-left: 30px;
+        top: 50px;
+        left: 0px;
+        z-index: 100;
+    }
+
+    .nav-logo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: all 0.5s ease;
+        top: 60px;
+        margin-left: 0px;
+        
+    }
+
+    .nav-links {
+        gap: 50px;
+        display: flex;
+        align-items: center;
+        scale: 0.7;
+        top: 40px;
+        right: 190px;
+    }
+
+    .nav-links li {
+        padding: 10px 15px;
+        position: relative;
+        bottom: 15px;
+        right: -150px;
+    }
+
+    /* Dropdown adjustments */
+    .nav-links li ul {
+        top: calc(100% + 5px);
+        min-width: 250px;
+        padding: 15px 0;
+        right: auto;
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    .nav-links li ul li {
+        padding: 10px 20px;
+        font-size: 16px;
+        right: 0;
+    }
+
+    /* Arrow icon adjustments */
+    .arrow img {
+        width: 20px;
+        height: auto;
+        margin-left: 4px;
+    }
 }

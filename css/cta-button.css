@@ -82,3 +82,38 @@
     transform: translateY(-2px);
 }
 
+/* Medium-Large Screens (1201px - 1440px) */
+@media screen and (max-width: 1440px) {
+    .cta-section {
+        width: 85%;
+        max-width: 1400px;
+        margin: 90px auto;
+        padding: 60px 30px;
+        height: 400px;
+    }
+
+    .cta-content {
+        padding: 0 20px;
+        gap: 25px;
+    }
+
+    .cta-title {
+        font-size: 32px;
+        height: auto;
+        margin-top: -30px;
+    }
+
+    .cta-text {
+        font-size: 20px;
+        max-width: 800px;
+        margin-top: -20px;
+        margin-bottom: 0;
+    }
+
+    .cta-button {
+        width: 260px;
+        height: 70px;
+        font-size: 24px;
+        padding: 15px 35px;
+    }
+}

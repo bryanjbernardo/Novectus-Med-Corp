@@ -1165,3 +1165,149 @@ a {
         opacity: 0;
     }
 }
+
+/* Medium-Large Screens (1201px - 1440px) */
+@media screen and (max-width: 1440px) {
+    /* Hero Section */
+    .about-hero-content {
+        padding: 45px 20px 0;
+        max-width: 800px;
+    }
+
+    .about-hero-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .about-hero-description {
+        font-size: 23px;
+    }
+
+    /* Vision & Mission Section */
+    .vision-mission {
+        width: 130%;
+        max-width: 1720px;
+        height: 1000px;  /* Adjusted height */
+        margin-left: -20%;
+        scale: 0.8;
+        transform-origin: top center;
+        margin-bottom: -250px;  /* Adjusted margin */
+    }
+
+    .vision-container,
+    .mission-container {
+        width: 600px;  /* Adjusted width */
+    }
+
+    .vision-container h2,
+    .mission-container h2 {
+        font-size: 46px;  /* Slightly larger */
+        height: 55px;
+        margin-bottom: 20px;
+    }
+
+    .vision-container p,
+    .mission-container p {
+        font-size: 20px;  /* Increased for better readability */
+        width: 580px;
+        line-height: 1.6;
+    }
+
+    /* Adjust images */
+    .mission-image,
+    .vision-image {
+        width: 450px;
+        height: 330px;
+    }
+
+    /* Stats Section */
+   
+    .stat-box {
+        width: 500px;
+        font-size: 21px;
+        margin-left: 250px;
+        scale: 0.9;
+    }
+
+     /* Story Section */
+    .story-section {
+        width: 130%;
+        max-width: 1720px;
+        margin-left: -23%;
+        scale: 0.8;
+        transform-origin: top center;
+        margin-bottom: -300px;
+    }
+
+    .story-title {
+        font-size: 42px;
+        margin-bottom: 60px;
+        margin-left: 570px;
+    }
+
+    .timeline-content {
+        font-size: 20px;
+        width: 400px;
+        height: 199px;
+        font-size: 21px;
+        line-height: auto;
+        align-content: top;
+    }
+    
+    .map-section {
+        position: relative;
+        scale: 0.7;
+        right: 10%;
+        top: -20px;
+    }
+
+    .map-section .map-content {
+        margin-top: -120px;
+        
+    }
+
+    /* Partners Section Refinements */
+    .partners-section {
+        padding: 60px 0;
+        margin-top: -50px;  /* Adjust spacing from previous section */
+        margin-left: 3%;
+        scale: 0.9;
+        margin-bottom: -50px;
+    }
+    .partners-section .section-title {
+        font-size: 46px;
+        margin-bottom: 30px;
+    }
+
+    .partners-section .section-text {
+        font-size: 24px;
+        max-width: 900px;
+        margin: 0 auto 40px;
+    }
+
+    .partners-grid {
+        max-width: 1200px;
+        gap: 40px;
+        padding: 0 40px;
+    }
+
+    .partner-logo {
+        width: 160px;
+        height: 160px;
+        padding: 15px;
+    }
+
+    .partner-logo img {
+        max-width: 180px;
+    }
+
+    /* Shop links adjustments */
+    .shop-links {
+        margin-top: 50px;
+        gap: 50px;
+    }
+
+    .shop-link {
+        height: 40px;
+    }
+}
